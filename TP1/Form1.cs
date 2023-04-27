@@ -21,5 +21,22 @@ namespace TP1
         {
 
         }
+
+        private void articuloToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+
+
+/*
+ Listado de artículos.
+Búsqueda de artículos por distintos criterios.
+Agregar artículos.
+Modificar artículos.
+Eliminar artículos.
+Ver detalle de un artículo.
+
+ */
