@@ -1,6 +1,6 @@
 ﻿namespace TP1
 {
-    partial class Form1
+    partial class ContenedorPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -67,6 +67,7 @@
             this.listarArticulosMenu.Name = "listarArticulosMenu";
             this.listarArticulosMenu.Size = new System.Drawing.Size(97, 20);
             this.listarArticulosMenu.Text = "Listar Articulos";
+            this.listarArticulosMenu.Click += new System.EventHandler(this.listarArticulosMenu_Click);
             // 
             // buscarToolStripMenuItem
             // 
@@ -173,16 +174,16 @@
             this.categoriaToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.categoriaToolStripMenuItem2.Text = "Categoria";
             // 
-            // Form1
+            // ContenedorPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuPrincipal);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuPrincipal;
-            this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "ContenedorPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalogo Articulos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP1
 {
-    public partial class Form1 : Form
+    public partial class ContenedorPrincipal : Form
     {
-        public Form1()
+        public ContenedorPrincipal()
         {
             InitializeComponent();
         }
@@ -22,21 +22,16 @@ namespace TP1
 
         }
 
-        private void articuloToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
 
+        private void listarArticulosMenu_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.MdiParent= this;
+            form2.Show();
         }
+
     }
 }
 
 
 
-/*
- Listado de artículos.
-Búsqueda de artículos por distintos criterios.
-Agregar artículos.
-Modificar artículos.
-Eliminar artículos.
-Ver detalle de un artículo.
-
- */
