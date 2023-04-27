@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-//Probando cambios en git
 
 namespace TP1
 {
