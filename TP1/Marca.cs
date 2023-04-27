@@ -11,5 +11,11 @@ namespace TP1
         private int codigo;
         private string nombre;
 
+        public Marca(int codigo, string nombre)
+        {
+            this.codigo = codigo;
+            this.nombre = nombre;
+        }
+        public Marca() {}
     }
 }

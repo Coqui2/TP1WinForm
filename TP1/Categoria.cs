@@ -10,5 +10,13 @@ namespace TP1
     {
         private int codigo;
         private string nombre;
+
+        public Categoria(int codigo, string nombre)
+        {
+            this.codigo = codigo;
+            this.nombre = nombre;
+        }
+        public Categoria() { }
+        
     }
 }
