@@ -17,6 +17,12 @@ namespace TP1
             this.nombre = nombre;
         }
         public Categoria() { }
+        public int Codigo { get; set; }
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
         
     }
 }

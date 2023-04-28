@@ -25,6 +25,13 @@ namespace TP1
 
         private void listarArticulosMenu_Click(object sender, EventArgs e)
         {
+            foreach(Form form in Application.OpenForms)
+            {
+                if(form.GetType()==typeof(Form2))
+                {
+                    return;
+                }
+            }
             Form2 form2 = new Form2();
             form2.MdiParent= this;
             form2.Show();

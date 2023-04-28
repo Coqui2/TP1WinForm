@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,5 +18,11 @@ namespace TP1
             this.nombre = nombre;
         }
         public Marca() {}
+        public int Codigo { get; set; }
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
     }
 }
