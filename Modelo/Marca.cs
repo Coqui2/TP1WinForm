@@ -4,25 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP1
+
+namespace Modelo
 {
-    internal class Categoria
+    public class Marca
     {
         private int codigo;
         private string nombre;
 
-        public Categoria(int codigo, string nombre)
+        public Marca(int codigo, string nombre)
         {
             this.codigo = codigo;
             this.nombre = nombre;
         }
-        public Categoria() { }
+        public Marca() {}
         public int Codigo { get; set; }
         public string Nombre
         {
             get { return nombre; }
             set { nombre = value; }
         }
-        
     }
 }

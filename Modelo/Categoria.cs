@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP1
+namespace Modelo
 {
-    internal class Marca
+    public class Categoria
     {
         private int codigo;
         private string nombre;
 
-        public Marca(int codigo, string nombre)
+        public Categoria(int codigo, string nombre)
         {
             this.codigo = codigo;
             this.nombre = nombre;
         }
-        public Marca() {}
+        public Categoria() { }
         public int Codigo { get; set; }
         public string Nombre
         {
             get { return nombre; }
             set { nombre = value; }
         }
+        
     }
 }

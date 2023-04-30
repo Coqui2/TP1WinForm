@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Modelo;
 
 namespace TP1
 {
@@ -15,7 +16,6 @@ namespace TP1
     {
         public Form2()
         {
-
             InitializeComponent();
             this.Controls.Add(listaArticulos);
             listaArticulos.View= View.Details;
