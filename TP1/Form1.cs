@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,11 +38,11 @@ namespace TP1
             form2.Show();
         }
 
-        private void porCódigoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listarArticulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in Application.OpenForms)
             {
-                if (form.GetType() == typeof(Form2))
+                if (form.GetType() == typeof(Form2) || form.GetType() == typeof(Form4))
                 {
                     return;
                 }
@@ -55,15 +56,87 @@ namespace TP1
         {
             foreach (Form form in Application.OpenForms)
             {
-                if (form.GetType() == typeof(Form3))
+                if (form.GetType() == typeof(Form4))
                 {
                     return;
                 }
             }
+            Form4 form4 = new Form4();
+            form4.MdiParent = this;
+            form4.Show();
+        }
 
-            Form3 form3 = new Form3();
-            form3.MdiParent = this;
-            form3.Show();
+        private void listarCategoríasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Form5))
+                {
+                    return;
+                }
+            }
+            Form5 form5 = new Form5();
+            form5.MdiParent = this;
+            form5.Show();
+        }
+
+        private void porCódigoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Form6))
+                {
+                    return;
+                }
+            }
+            Form6 form6 = new Form6();
+            form6.MdiParent = this;
+            form6.Show();
+
+        }
+
+        private void porNombreToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Form7))
+                {
+                    return;
+                }
+            }
+            Form7 form7 = new Form7();
+            form7.MdiParent = this;
+            form7.Show();
+
+        }
+
+        private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Form8))
+                {
+                    return;
+                }
+            }
+            Form8 form8 = new Form8();
+            form8.MdiParent = this;
+            form8.Show();
+        }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Form9))
+                {
+                    return;
+                }
+            }
+            Form9 form9 = new Form9();
+            form9.MdiParent = this;
+            form9.Show();
+
         }
     }
 }

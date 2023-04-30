@@ -56,6 +56,7 @@
             this.listaArticulos.TabIndex = 1;
             this.listaArticulos.UseCompatibleStateImageBehavior = false;
             this.listaArticulos.View = System.Windows.Forms.View.List;
+            this.listaArticulos.SelectedIndexChanged += new System.EventHandler(this.listaArticulos_SelectedIndexChanged);
             // 
             // labelListadoArticulos
             // 

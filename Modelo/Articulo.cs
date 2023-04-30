@@ -8,7 +8,7 @@ namespace Modelo
 {
     public class Articulo
     {
-        private int codigo;
+        private string codigo;
         private string nombre;
         private string descripcion;
         Marca marca;
@@ -16,7 +16,7 @@ namespace Modelo
         List<string> imagenes;
         private float precio;
 
-        public Articulo(int codigo, string nombre, string descripcion, Marca marca, Categoria categoria, List<string> imagenes, float precio)
+        public Articulo(string codigo, string nombre, string descripcion, Marca marca, Categoria categoria, List<string> imagenes, float precio)
         {
             this.codigo = codigo;
             this.nombre = nombre;
@@ -26,7 +26,8 @@ namespace Modelo
             this.imagenes = imagenes;
             this.precio = precio;
         }
-        public Articulo() {}
+        public Articulo() { }
+        public string Codigo { get; set; }
         public string Nombre
         {
             get { return nombre; }
