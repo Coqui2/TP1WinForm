@@ -37,6 +37,34 @@ namespace TP1
             form2.Show();
         }
 
+        private void porCódigoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Form2))
+                {
+                    return;
+                }
+            }
+            Form2 form2 = new Form2();
+            form2.MdiParent = this;
+            form2.Show();
+        }
+
+        private void listarMarcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Form3))
+                {
+                    return;
+                }
+            }
+
+            Form3 form3 = new Form3();
+            form3.MdiParent = this;
+            form3.Show();
+        }
     }
 }
 

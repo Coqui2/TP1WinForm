@@ -17,8 +17,8 @@ namespace TP1
         {
 
             InitializeComponent();
-            this.Controls.Add(listView1);
-            listView1.View= View.Details;
+            this.Controls.Add(listaArticulos);
+            listaArticulos.View= View.Details;
             this.Load += Form2_Load;
         }
 
@@ -27,10 +27,10 @@ namespace TP1
             this.Dock = DockStyle.Fill;
             this.AutoSize = false;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            listView1.Columns.Add("Nombre", -2, HorizontalAlignment.Left);
-            listView1.Columns.Add("Marca", -2, HorizontalAlignment.Left);
-            listView1.Columns.Add("Categoria", -2, HorizontalAlignment.Left);
-            listView1.Columns.Add("Precio", -2, HorizontalAlignment.Left);
+            listaArticulos.Columns.Add("Nombre", -2, HorizontalAlignment.Left);
+            listaArticulos.Columns.Add("Marca", -2, HorizontalAlignment.Left);
+            listaArticulos.Columns.Add("Categoria", -2, HorizontalAlignment.Left);
+            listaArticulos.Columns.Add("Precio", -2, HorizontalAlignment.Left);
 
             // BaseDeDatos db = new BaseDeDatos();
             List<Articulo> articulos= new List<Articulo>();
@@ -49,15 +49,9 @@ namespace TP1
             foreach (Articulo articulo in articulos)
             {
                 ListViewItem item = new ListViewItem(new[] {articulo.Nombre,articulo.Marca.Nombre,articulo.Categoria.Nombre,articulo.Precio.ToString()});
-                listView1.Items.Add(item);
+                listaArticulos.Items.Add(item);
             }
 
-
-        }
-
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
     }
