@@ -14,10 +14,10 @@ using System.Data.SqlTypes;
 
 namespace TP1
 {
-    public partial class Form7 : Form
+    public partial class frmBuscarArticuloNombre : Form
     {
        
-        public Form7()
+        public frmBuscarArticuloNombre()
         {
             InitializeComponent();
             this.Controls.Add(listaResultados);

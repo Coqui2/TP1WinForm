@@ -14,18 +14,18 @@ using System.Data.SqlTypes;
 
 namespace TP1
 {
-    public partial class Form9 : Form
+    public partial class frmBuscarArticulo : Form
     {
        
-        public Form9()
+        public frmBuscarArticulo()
         {
             InitializeComponent();
             this.Controls.Add(listaResultados);
             listaResultados.View= View.Details;
-            this.Load += Form8_Load;
+            this.Load += Form10_Load;
         }
 
-        private void Form8_Load(object sender, EventArgs e)
+        private void Form10_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
             this.AutoSize = false;

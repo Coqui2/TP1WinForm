@@ -1,6 +1,6 @@
 ﻿namespace TP1
 {
-    partial class Form6
+    partial class frmBuscarCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.labelBuscarArtCodigo = new System.Windows.Forms.Label();
             this.btnBuscarArtCodigo = new System.Windows.Forms.Button();
-            this.listaCategoria = new System.Windows.Forms.ListView();
+            this.listaResultados = new System.Windows.Forms.ListView();
             this.textBoxBusquedaCodigoArt = new System.Windows.Forms.TextBox();
             this.labelIngreseCodigo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,52 +42,51 @@
             this.labelBuscarArtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBuscarArtCodigo.Location = new System.Drawing.Point(45, 37);
             this.labelBuscarArtCodigo.Name = "labelBuscarArtCodigo";
-            this.labelBuscarArtCodigo.Size = new System.Drawing.Size(362, 31);
+            this.labelBuscarArtCodigo.Size = new System.Drawing.Size(249, 31);
             this.labelBuscarArtCodigo.TabIndex = 2;
-            this.labelBuscarArtCodigo.Text = "Buscar Artículo por Código";
+            this.labelBuscarArtCodigo.Text = "Buscar categorías";
             // 
             // btnBuscarArtCodigo
             // 
             this.btnBuscarArtCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarArtCodigo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnBuscarArtCodigo.Location = new System.Drawing.Point(331, 80);
+            this.btnBuscarArtCodigo.Location = new System.Drawing.Point(468, 100);
             this.btnBuscarArtCodigo.Name = "btnBuscarArtCodigo";
             this.btnBuscarArtCodigo.Size = new System.Drawing.Size(63, 23);
             this.btnBuscarArtCodigo.TabIndex = 5;
             this.btnBuscarArtCodigo.Text = "Buscar";
             this.btnBuscarArtCodigo.UseVisualStyleBackColor = false;
             // 
-            // listaCategoria
+            // listaResultados
             // 
-            this.listaCategoria.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
-            this.listaCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.listaResultados.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
+            this.listaResultados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listaCategoria.FullRowSelect = true;
-            this.listaCategoria.GridLines = true;
-            this.listaCategoria.HideSelection = false;
-            this.listaCategoria.Location = new System.Drawing.Point(54, 167);
-            this.listaCategoria.Name = "listaCategoria";
-            this.listaCategoria.Size = new System.Drawing.Size(477, 159);
-            this.listaCategoria.TabIndex = 1;
-            this.listaCategoria.UseCompatibleStateImageBehavior = false;
-            this.listaCategoria.View = System.Windows.Forms.View.List;
+            this.listaResultados.FullRowSelect = true;
+            this.listaResultados.GridLines = true;
+            this.listaResultados.HideSelection = false;
+            this.listaResultados.Location = new System.Drawing.Point(54, 167);
+            this.listaResultados.Name = "listaResultados";
+            this.listaResultados.Size = new System.Drawing.Size(688, 159);
+            this.listaResultados.TabIndex = 1;
+            this.listaResultados.UseCompatibleStateImageBehavior = false;
+            this.listaResultados.View = System.Windows.Forms.View.List;
             // 
             // textBoxBusquedaCodigoArt
             // 
-            this.textBoxBusquedaCodigoArt.Location = new System.Drawing.Point(181, 80);
+            this.textBoxBusquedaCodigoArt.Location = new System.Drawing.Point(54, 103);
             this.textBoxBusquedaCodigoArt.Name = "textBoxBusquedaCodigoArt";
-            this.textBoxBusquedaCodigoArt.Size = new System.Drawing.Size(127, 20);
+            this.textBoxBusquedaCodigoArt.Size = new System.Drawing.Size(388, 20);
             this.textBoxBusquedaCodigoArt.TabIndex = 6;
             // 
             // labelIngreseCodigo
             // 
-            this.labelIngreseCodigo.AutoSize = true;
             this.labelIngreseCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.labelIngreseCodigo.Location = new System.Drawing.Point(51, 80);
             this.labelIngreseCodigo.Name = "labelIngreseCodigo";
-            this.labelIngreseCodigo.Size = new System.Drawing.Size(124, 18);
+            this.labelIngreseCodigo.Size = new System.Drawing.Size(391, 20);
             this.labelIngreseCodigo.TabIndex = 7;
-            this.labelIngreseCodigo.Text = "Ingrese el código:";
+            this.labelIngreseCodigo.Text = "Ingrese el nombre de la categoría:";
             // 
             // label2
             // 
@@ -99,7 +98,7 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Resultados de la búsqueda:";
             // 
-            // Form6
+            // Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -111,9 +110,9 @@
             this.Controls.Add(this.textBoxBusquedaCodigoArt);
             this.Controls.Add(this.btnBuscarArtCodigo);
             this.Controls.Add(this.labelBuscarArtCodigo);
-            this.Controls.Add(this.listaCategoria);
+            this.Controls.Add(this.listaResultados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form6";
+            this.Name = "Form9";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -127,7 +126,7 @@
         #endregion
         private System.Windows.Forms.Label labelBuscarArtCodigo;
         private System.Windows.Forms.Button btnBuscarArtCodigo;
-        private System.Windows.Forms.ListView listaCategoria;
+        private System.Windows.Forms.ListView listaResultados;
         private System.Windows.Forms.TextBox textBoxBusquedaCodigoArt;
         private System.Windows.Forms.Label labelIngreseCodigo;
         private System.Windows.Forms.Label label2;

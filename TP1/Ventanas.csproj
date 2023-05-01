@@ -46,79 +46,178 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmContenedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmContenedor.Designer.cs">
+      <DependentUpon>frmContenedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form9.cs">
+    <Compile Include="frmBuscarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form9.Designer.cs">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <Compile Include="frmBuscarArticulo.Designer.cs">
+      <DependentUpon>frmBuscarArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form8.cs">
+    <Compile Include="frmDialogEliminarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form8.Designer.cs">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <Compile Include="frmDialogEliminarArticulo.Designer.cs">
+      <DependentUpon>frmDialogEliminarArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form7.cs">
+    <Compile Include="frmDialogVerArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form7.Designer.cs">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <Compile Include="frmDialogVerArticulo.Designer.cs">
+      <DependentUpon>frmDialogVerArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="frmDialogEliminarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="frmDialogEliminarMarca.Designer.cs">
+      <DependentUpon>frmDialogEliminarMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
+    <Compile Include="frmDialogEliminarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="frmDialogEliminarCategoria.Designer.cs">
+      <DependentUpon>frmDialogEliminarCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="frmDialogEditarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="frmDialogEditarCategoria.Designer.cs">
+      <DependentUpon>frmDialogEditarCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="frmDialogEditarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="frmDialogEditarMarca.Designer.cs">
+      <DependentUpon>frmDialogEditarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDialogEditarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialogEditarArticulo.Designer.cs">
+      <DependentUpon>frmDialogEditarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDialogAgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialogAgregarCategoria.Designer.cs">
+      <DependentUpon>frmDialogAgregarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDialogAgregarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialogAgregarMarca.Designer.cs">
+      <DependentUpon>frmDialogAgregarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDialogAgregarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialogAgregarArticulo.Designer.cs">
+      <DependentUpon>frmDialogAgregarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarCategoria.Designer.cs">
+      <DependentUpon>frmBuscarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarMarca.Designer.cs">
+      <DependentUpon>frmBuscarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarArticuloNombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarArticuloNombre.Designer.cs">
+      <DependentUpon>frmBuscarArticuloNombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarArticuloCod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarArticuloCod.Designer.cs">
+      <DependentUpon>frmBuscarArticuloCod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadoCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoCategorias.Designer.cs">
+      <DependentUpon>frmListadoCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadoMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoMarcas.Designer.cs">
+      <DependentUpon>frmListadoMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadoArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoArticulos.Designer.cs">
+      <DependentUpon>frmListadoArticulos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmContenedor.resx">
+      <DependentUpon>frmContenedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form9.resx">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <EmbeddedResource Include="frmBuscarArticulo.resx">
+      <DependentUpon>frmBuscarArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form8.resx">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <EmbeddedResource Include="frmDialogEliminarArticulo.resx">
+      <DependentUpon>frmDialogEliminarArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <EmbeddedResource Include="frmDialogVerArticulo.resx">
+      <DependentUpon>frmDialogVerArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="frmDialogEliminarMarca.resx">
+      <DependentUpon>frmDialogEliminarMarca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="frmDialogEliminarCategoria.resx">
+      <DependentUpon>frmDialogEliminarCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="frmDialogEditarCategoria.resx">
+      <DependentUpon>frmDialogEditarCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="frmDialogEditarMarca.resx">
+      <DependentUpon>frmDialogEditarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDialogEditarArticulo.resx">
+      <DependentUpon>frmDialogEditarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDialogAgregarCategoria.resx">
+      <DependentUpon>frmDialogAgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDialogAgregarMarca.resx">
+      <DependentUpon>frmDialogAgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDialogAgregarArticulo.resx">
+      <DependentUpon>frmDialogAgregarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarCategoria.resx">
+      <DependentUpon>frmBuscarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarMarca.resx">
+      <DependentUpon>frmBuscarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarArticuloNombre.resx">
+      <DependentUpon>frmBuscarArticuloNombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarArticuloCod.resx">
+      <DependentUpon>frmBuscarArticuloCod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoCategorias.resx">
+      <DependentUpon>frmListadoCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoMarcas.resx">
+      <DependentUpon>frmListadoMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoArticulos.resx">
+      <DependentUpon>frmListadoArticulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

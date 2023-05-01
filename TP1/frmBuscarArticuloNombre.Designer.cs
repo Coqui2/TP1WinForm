@@ -1,6 +1,6 @@
 ﻿namespace TP1
 {
-    partial class Form8
+    partial class frmBuscarArticuloNombre
     {
         /// <summary>
         /// Required designer variable.
@@ -42,9 +42,9 @@
             this.labelBuscarArtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBuscarArtCodigo.Location = new System.Drawing.Point(45, 37);
             this.labelBuscarArtCodigo.Name = "labelBuscarArtCodigo";
-            this.labelBuscarArtCodigo.Size = new System.Drawing.Size(208, 31);
+            this.labelBuscarArtCodigo.Size = new System.Drawing.Size(372, 31);
             this.labelBuscarArtCodigo.TabIndex = 2;
-            this.labelBuscarArtCodigo.Text = "Buscar Marcas";
+            this.labelBuscarArtCodigo.Text = "Buscar Artículo por Nombre";
             // 
             // btnBuscarArtCodigo
             // 
@@ -67,7 +67,7 @@
             this.listaResultados.HideSelection = false;
             this.listaResultados.Location = new System.Drawing.Point(54, 167);
             this.listaResultados.Name = "listaResultados";
-            this.listaResultados.Size = new System.Drawing.Size(477, 159);
+            this.listaResultados.Size = new System.Drawing.Size(688, 159);
             this.listaResultados.TabIndex = 1;
             this.listaResultados.UseCompatibleStateImageBehavior = false;
             this.listaResultados.View = System.Windows.Forms.View.List;
@@ -84,9 +84,9 @@
             this.labelIngreseCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.labelIngreseCodigo.Location = new System.Drawing.Point(51, 80);
             this.labelIngreseCodigo.Name = "labelIngreseCodigo";
-            this.labelIngreseCodigo.Size = new System.Drawing.Size(391, 20);
+            this.labelIngreseCodigo.Size = new System.Drawing.Size(208, 20);
             this.labelIngreseCodigo.TabIndex = 7;
-            this.labelIngreseCodigo.Text = "Ingrese el nombre de la marca:";
+            this.labelIngreseCodigo.Text = "Ingrese el nombre del artículo:";
             // 
             // label2
             // 
@@ -98,7 +98,7 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Resultados de la búsqueda:";
             // 
-            // Form8
+            // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,7 +112,7 @@
             this.Controls.Add(this.labelBuscarArtCodigo);
             this.Controls.Add(this.listaResultados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form8";
+            this.Name = "Form7";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

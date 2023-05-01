@@ -14,10 +14,10 @@ using System.Data.SqlTypes;
 
 namespace TP1
 {
-    public partial class Form6 : Form
+    public partial class frmBuscarArticuloCod : Form
     {
        
-        public Form6()
+        public frmBuscarArticuloCod()
         {
             InitializeComponent();
             this.Controls.Add(listaCategoria);

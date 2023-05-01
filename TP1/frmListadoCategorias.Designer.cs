@@ -1,6 +1,6 @@
 ﻿namespace TP1
 {
-    partial class Form5
+    partial class frmListadoCategorias
     {
         /// <summary>
         /// Required designer variable.

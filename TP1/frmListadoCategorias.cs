@@ -14,7 +14,7 @@ using System.Data.SqlTypes;
 
 namespace TP1
 {
-    public partial class Form5 : Form
+    public partial class frmListadoCategorias : Form
     {
         public List<Categoria> listar()
         {
@@ -35,7 +35,7 @@ namespace TP1
             accesoDatos.CerrarConexion();
             return lista;
         }
-        public Form5()
+        public frmListadoCategorias()
         {
             InitializeComponent();
             this.Controls.Add(listaCategoria);
