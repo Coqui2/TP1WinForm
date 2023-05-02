@@ -31,6 +31,7 @@ namespace TP1
                 if(form.GetType()==typeof(Form2))
                 {
                     form.Focus();
+                    return;
                 }
             }
 
@@ -44,9 +45,10 @@ namespace TP1
         {
             foreach (Form form in Application.OpenForms)
             {
-                if (form.GetType() == typeof(Form2) || form.GetType() == typeof(frmListadoMarcas))
+                if (form.GetType() == typeof(Form2))
                 {
                     form.Focus();
+                    return;
                 }
             }
             Form2 form2 = new Form2();
@@ -61,6 +63,7 @@ namespace TP1
                 if (form.GetType() == typeof(frmListadoMarcas))
                 {
                     form.Focus(); 
+                    return;
                 }
             }
             frmListadoMarcas form4 = new frmListadoMarcas();
@@ -75,6 +78,7 @@ namespace TP1
                 if (form.GetType() == typeof(frmListadoCategorias))
                 {
                     form.Focus();
+                    return;
                 }
             }
             frmListadoCategorias form5 = new frmListadoCategorias();
@@ -89,6 +93,7 @@ namespace TP1
                 if (form.GetType() == typeof(frmBuscarArticuloCod))
                 {
                     form.Focus();
+                    return;
                 }
             }
             frmBuscarArticuloCod form6 = new frmBuscarArticuloCod();
@@ -104,6 +109,7 @@ namespace TP1
                 if (form.GetType() == typeof(frmBuscarArticuloNombre))
                 {
                     form.Focus();
+                    return;
                 }
             }
             frmBuscarArticuloNombre form7 = new frmBuscarArticuloNombre();
@@ -119,6 +125,7 @@ namespace TP1
                 if (form.GetType() == typeof(frmBuscarMarca))
                 {
                     form.Focus();
+                    return;
                 }
             }
             frmBuscarMarca form8 = new frmBuscarMarca();
@@ -133,6 +140,7 @@ namespace TP1
                 if (form.GetType() == typeof(frmBuscarCategoria))
                 {
                     form.Focus();
+                    return;
                 }
             }
             frmBuscarCategoria form9 = new frmBuscarCategoria();
@@ -148,6 +156,7 @@ namespace TP1
                 if (form.GetType() == typeof(frmBuscarArticulo))
                 {
                     form.Focus();
+                    return;
                 }
             }
             frmBuscarArticulo form10 = new frmBuscarArticulo();
@@ -162,6 +171,7 @@ namespace TP1
                 if (form.GetType() == typeof(frmBuscarMarca))
                 {
                     form.Focus();
+                    return;
                 }
             }
             frmBuscarMarca form8 = new frmBuscarMarca();
@@ -176,6 +186,7 @@ namespace TP1
                 if (form.GetType() == typeof(frmBuscarCategoria))
                 {
                     form.Focus();
+                    return;
                 }
             }
             frmBuscarCategoria form9 = new frmBuscarCategoria();
@@ -185,91 +196,47 @@ namespace TP1
 
         private void AgregarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == typeof(frmDialogAgregarArticulo))
-                {
-                    return;
-                }
-            }
+            
             frmDialogAgregarArticulo form11 = new frmDialogAgregarArticulo();
             form11.ShowDialog();
         }
 
         private void marcaToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == typeof(frmDialogAgregarMarca))
-                {
-                    return;
-                }
-            }
+            
             frmDialogAgregarMarca form12 = new frmDialogAgregarMarca();
             form12.ShowDialog();
         }
 
         private void agregarCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == typeof(frmDialogAgregarCategoria))
-                {
-                    return;
-                }
-            }
             frmDialogAgregarCategoria form13 = new frmDialogAgregarCategoria();
             form13.ShowDialog();
         }
 
         private void ModificarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == typeof(frmDialogEditarArticulo))
-                {
-                    return;
-                }
-            }
             frmDialogEditarArticulo form14 = new frmDialogEditarArticulo();
             form14.ShowDialog();
         }
 
         private void categoriaToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            foreach (Form item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(frmDialogEditarMarca))
-                {
-                    return;
-                }
-            }
+            
             frmDialogEditarMarca form = new frmDialogEditarMarca();
             form.ShowDialog();
         }
 
         private void editarCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Form item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(frmDialogEditarCategoria))
-                {
-                    return;
-                }
-            }
+            
             frmDialogEditarCategoria form = new frmDialogEditarCategoria();
             form.ShowDialog();
         }
 
         private void eliminarCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Form item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(frmDialogEliminarCategoria))
-                {
-                    return;
-                }
-            }
+            
             frmDialogEliminarCategoria form = new frmDialogEliminarCategoria();
             form.ShowDialog();
         }
@@ -278,13 +245,6 @@ namespace TP1
         {
             
             
-            foreach (Form item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(frmDialogEliminarMarca))
-                {
-                    return;
-                }
-            }
             frmDialogEliminarMarca form = new frmDialogEliminarMarca();
             form.ShowDialog();
         }
@@ -292,13 +252,6 @@ namespace TP1
         private void VerDetallesArticuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            foreach (Form item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(frmDialogVerArticulo))
-                {
-                    return;
-                }
-            }
             frmDialogVerArticulo form = new frmDialogVerArticulo();
             form.ShowDialog();
         }
