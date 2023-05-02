@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listaArticulos = new System.Windows.Forms.ListView();
             this.labelListadoArticulos = new System.Windows.Forms.Label();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
@@ -39,24 +38,10 @@
             this.labelCategoria = new System.Windows.Forms.Label();
             this.labelPrecioArticulo = new System.Windows.Forms.Label();
             this.btnVerArticulo = new System.Windows.Forms.Button();
+            this.listaArticulos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaArticulos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listaArticulos
-            // 
-            this.listaArticulos.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
-            this.listaArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listaArticulos.FullRowSelect = true;
-            this.listaArticulos.GridLines = true;
-            this.listaArticulos.HideSelection = false;
-            this.listaArticulos.Location = new System.Drawing.Point(51, 85);
-            this.listaArticulos.Name = "listaArticulos";
-            this.listaArticulos.Size = new System.Drawing.Size(477, 159);
-            this.listaArticulos.TabIndex = 1;
-            this.listaArticulos.UseCompatibleStateImageBehavior = false;
-            this.listaArticulos.View = System.Windows.Forms.View.List;
-            this.listaArticulos.SelectedIndexChanged += new System.EventHandler(this.listaArticulos_SelectedIndexChanged);
             // 
             // labelListadoArticulos
             // 
@@ -168,6 +153,17 @@
             this.btnVerArticulo.Text = "Ver detalles";
             this.btnVerArticulo.UseVisualStyleBackColor = false;
             // 
+            // listaArticulos
+            // 
+            this.listaArticulos.AllowUserToAddRows = false;
+            this.listaArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaArticulos.Location = new System.Drawing.Point(51, 85);
+            this.listaArticulos.Name = "listaArticulos";
+            this.listaArticulos.Size = new System.Drawing.Size(515, 146);
+            this.listaArticulos.TabIndex = 12;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,6 +171,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.listaArticulos);
             this.Controls.Add(this.btnVerArticulo);
             this.Controls.Add(this.labelPrecioArticulo);
             this.Controls.Add(this.labelCategoria);
@@ -185,7 +182,6 @@
             this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.btnModificarArticulo);
             this.Controls.Add(this.labelListadoArticulos);
-            this.Controls.Add(this.listaArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.ShowIcon = false;
@@ -194,13 +190,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ListView listaArticulos;
         private System.Windows.Forms.Label labelListadoArticulos;
         private System.Windows.Forms.Button btnModificarArticulo;
         private System.Windows.Forms.Button btnEliminarArticulo;
@@ -211,5 +207,6 @@
         private System.Windows.Forms.Label labelCategoria;
         private System.Windows.Forms.Label labelPrecioArticulo;
         private System.Windows.Forms.Button btnVerArticulo;
+        private System.Windows.Forms.DataGridView listaArticulos;
     }
 }

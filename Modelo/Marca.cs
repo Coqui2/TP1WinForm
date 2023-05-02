@@ -24,5 +24,10 @@ namespace Modelo
             get { return nombre; }
             set { nombre = value; }
         }
+
+        public override string ToString()
+        {
+            return nombre;
+        }
     }
 }

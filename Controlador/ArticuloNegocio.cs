@@ -19,7 +19,7 @@ namespace Controlador
         {
             List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
-                datos.SetConsulta("SELECT a.Id, a.Codigo, a.Nombre, a.Descripcion, ImagenUrl, a.precio,m.Id IdMarca, m.Descripcion Marca, c.Id IdCategoria, c.Descripcion Categoria " +
+                datos.SetConsulta("SELECT a.Id, a.Codigo, a.Nombre, a.Descripcion, a.precio,m.Id IdMarca, m.Descripcion Marca, c.Id IdCategoria, c.Descripcion Categoria " +
                     "from ARTICULOS A " +
                     "Inner Join Marcas as m on A.IdMarca = M.Id " +
                     "Inner Join CATEGORIAS as c on A.IdCategoria = C.Id");
@@ -37,7 +37,7 @@ namespace Controlador
                     aux.Categoria = new Categoria();
                     aux.Categoria.Codigo = (int)datos.Lector["IdCategoria"];
                     aux.Categoria.Nombre = (string)datos.Lector["Categoria"];
-                    aux.Precio = (float)datos.Lector["Precio"];
+                    aux.Precio = Convert.ToSingle(datos.Lector["Precio"]);
                     lista.Add(aux);             
                 }         
                 return lista;    

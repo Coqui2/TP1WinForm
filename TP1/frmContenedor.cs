@@ -20,7 +20,9 @@ namespace TP1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Form2 form2 = new Form2();
+            form2.MdiParent = this;
+            form2.Show();
         }
 
 
