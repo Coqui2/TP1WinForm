@@ -15,7 +15,7 @@ namespace Controlador
             List<Marca> lista = new List<Marca>();
             try
             {
-                datos.SetConsulta("select id, nombre from marcas");
+                datos.SetConsulta("select id, descripcion from marcas");
                 datos.EjecutarLectura();
                 while (datos.Lector.Read())
                 {
