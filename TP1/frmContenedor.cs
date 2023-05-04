@@ -203,58 +203,22 @@ namespace TP1
             form11.ShowDialog();
         }
 
-        private void marcaToolStripMenuItem2_Click(object sender, EventArgs e)
+        
+        private void artículoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            frmDialogAgregarMarca form12 = new frmDialogAgregarMarca();
-            form12.ShowDialog();
-        }
-
-        private void agregarCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmDialogAgregarCategoria form13 = new frmDialogAgregarCategoria();
-            form13.ShowDialog();
-        }
-
-        private void ModificarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmDialogEditarArticulo form14 = new frmDialogEditarArticulo();
-            form14.ShowDialog();
-        }
-
-        private void categoriaToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            
-            frmDialogEditarMarca form = new frmDialogEditarMarca();
+            frmDialogAgregarArticulo form = new frmDialogAgregarArticulo();
             form.ShowDialog();
         }
 
-        private void editarCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void marcaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            
-            frmDialogEditarCategoria form = new frmDialogEditarCategoria();
+            frmDialogAgregarMarca form= new frmDialogAgregarMarca();
             form.ShowDialog();
         }
 
-        private void eliminarCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void categoríaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            frmDialogEliminarCategoria form = new frmDialogEliminarCategoria();
-            form.ShowDialog();
-        }
-
-        private void eliminarMarcaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-            
-            frmDialogEliminarMarca form = new frmDialogEliminarMarca();
-            form.ShowDialog();
-        }
-
-        private void VerDetallesArticuloToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-            frmDialogVerArticulo form = new frmDialogVerArticulo();
+            frmDialogAgregarCategoria form = new frmDialogAgregarCategoria();
             form.ShowDialog();
         }
     }
