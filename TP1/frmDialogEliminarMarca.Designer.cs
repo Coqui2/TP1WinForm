@@ -30,7 +30,7 @@
         {
             this.labelEliminarMarca = new System.Windows.Forms.Label();
             this.labelConfirmacionEliminar = new System.Windows.Forms.Label();
-            this.btnModificarCategoria = new System.Windows.Forms.Button();
+            this.btnEliminarMarca = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -54,17 +54,18 @@
             this.labelConfirmacionEliminar.Text = "¿Desea eliminar la marca (NOMBRE_MARCA?";
             this.labelConfirmacionEliminar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnModificarCategoria
+            // btnEliminarMarca
             // 
-            this.btnModificarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btnModificarCategoria.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnModificarCategoria.Location = new System.Drawing.Point(191, 151);
-            this.btnModificarCategoria.Name = "btnModificarCategoria";
-            this.btnModificarCategoria.Size = new System.Drawing.Size(269, 32);
-            this.btnModificarCategoria.TabIndex = 21;
-            this.btnModificarCategoria.Text = "ELIMINAR MARCA";
-            this.btnModificarCategoria.UseVisualStyleBackColor = false;
+            this.btnEliminarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnEliminarMarca.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnEliminarMarca.Location = new System.Drawing.Point(191, 151);
+            this.btnEliminarMarca.Name = "btnEliminarMarca";
+            this.btnEliminarMarca.Size = new System.Drawing.Size(269, 32);
+            this.btnEliminarMarca.TabIndex = 21;
+            this.btnEliminarMarca.Text = "ELIMINAR MARCA";
+            this.btnEliminarMarca.UseVisualStyleBackColor = false;
+            this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
             // 
             // btnVolver
             // 
@@ -85,13 +86,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 216);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.btnModificarCategoria);
+            this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.labelConfirmacionEliminar);
             this.Controls.Add(this.labelEliminarMarca);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmDialogEliminarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Eliminar Marca";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.onFormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,7 +103,7 @@
 
         private System.Windows.Forms.Label labelEliminarMarca;
         private System.Windows.Forms.Label labelConfirmacionEliminar;
-        private System.Windows.Forms.Button btnModificarCategoria;
+        private System.Windows.Forms.Button btnEliminarMarca;
         private System.Windows.Forms.Button btnVolver;
     }
 }

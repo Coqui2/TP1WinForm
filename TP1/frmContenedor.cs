@@ -151,58 +151,6 @@ namespace TP1
 
         }
 
-        private void articuloToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == typeof(frmBuscarArticulo))
-                {
-                    form.Focus();
-                    return;
-                }
-            }
-            frmBuscarArticulo form10 = new frmBuscarArticulo();
-            form10.MdiParent = this;
-            form10.Show();
-        }
-
-        private void MarcasBuscarToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == typeof(frmBuscarMarca))
-                {
-                    form.Focus();
-                    return;
-                }
-            }
-            frmBuscarMarca form8 = new frmBuscarMarca();
-            form8.MdiParent = this;
-            form8.Show();
-        }
-
-        private void buscarCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == typeof(frmBuscarCategoria))
-                {
-                    form.Focus();
-                    return;
-                }
-            }
-            frmBuscarCategoria form9 = new frmBuscarCategoria();
-            form9.MdiParent = this;
-            form9.Show();
-        }
-
-        private void AgregarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-            frmDialogAgregarArticulo form11 = new frmDialogAgregarArticulo();
-            form11.ShowDialog();
-        }
-
         
         private void artículoToolStripMenuItem_Click(object sender, EventArgs e)
         {

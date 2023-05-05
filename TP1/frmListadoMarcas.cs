@@ -11,35 +11,29 @@ using System.Windows.Forms;
 using Modelo;
 using Controlador;
 using System.Data.SqlTypes;
+using System.Runtime.CompilerServices;
 
 namespace TP1
 {
     public partial class frmListadoMarcas : Form
     {
-        public List<Marca> listar()
+        private List<Marca> marcas;
+        private List<Marca> lista;
+
+        private void cargarLista()
         {
-            List<Marca> lista = new List<Marca>();
+            MarcaNegocio negocio = new MarcaNegocio();
+            marcas = negocio.listarMarcas();
+        }
 
-            AccesoDatos accesoDatos = new AccesoDatos();
-            accesoDatos.SetConsulta("SELECT M.Id AS IdMarca, M.Descripcion as NombreMarca\r\nFROM Marcas M");
-            accesoDatos.EjecutarLectura();
-
-            while (accesoDatos.Lector.Read())
-            {
-                Marca aux = new Marca();
-                aux.Codigo = (int)accesoDatos.Lector["IdMarca"];
-                aux.Nombre = (string)accesoDatos.Lector["NombreMarca"];
-
-                lista.Add(aux);
-            }
-            accesoDatos.CerrarConexion();
-            return lista;
+        private Marca getMarcaSeleccionada()
+        {
+            return (Marca)listaMarcas.CurrentRow.DataBoundItem;
         }
         public frmListadoMarcas()
         {
             InitializeComponent();
             this.Controls.Add(listaMarcas);
-            listaMarcas.View= View.Details;
             this.Load += Form4_Load;
         }
 
@@ -48,39 +42,60 @@ namespace TP1
             this.Dock = DockStyle.Fill;
             this.AutoSize = false;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-
-            listaMarcas.Columns.Add("Codigo", -2, HorizontalAlignment.Left);
-            listaMarcas.Columns.Add("Nombre", -2, HorizontalAlignment.Left);
-            List<Marca> marcas = new List<Marca>();
-            marcas = listar();   
+            cargarLista();
+            lista = marcas;
+            listaMarcas.DataSource = lista;
             
+        }
 
-
-            foreach (Marca marca in marcas)
-            {
-                ListViewItem item;
-                item = new ListViewItem(new[] { marca.Codigo.ToString(), marca.Nombre });
-                listaMarcas.Items.Add(item);
-            }
-
-           
+        
+        private void onTextChange(object sender, EventArgs e)
+        {
+            lista = marcas.FindAll(x => x.Nombre.ToUpper().Contains(textBoxFiltro.Text.ToUpper()));
+            listaMarcas.DataSource = lista;
 
         }
 
-        private void listaMarcas_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
-            List<Marca> marcas = new List<Marca>();
-            marcas = listar();
-            if(listaMarcas.SelectedIndices.Count > 0)
+            frmDialogAgregarMarca form = new frmDialogAgregarMarca();
+            form.Owner = this;
+            form.ShowDialog();
+        }
+
+        private void btnModificarMarca_Click(object sender, EventArgs e)
+        {
+            frmDialogEditarMarca form = new frmDialogEditarMarca(getMarcaSeleccionada());
+            form.Owner= this;
+            form.ShowDialog();
+        }
+
+        public void reload()
+        {
+            cargarLista();
+            if(textBoxFiltro.Text != "")
             {
-                int index = listaMarcas.FocusedItem.Index;
-
-                int codigo = marcas[index].Codigo;
-                labelCodigoMarca.Text = "Código Marca #" + codigo;
-
-                string nombre = marcas[index].Nombre;
-                labelNombreMarca.Text = nombre;
+                lista = marcas.FindAll(x => x.Nombre.ToUpper().Contains(textBoxFiltro.Text.ToUpper()));
+                listaMarcas.DataSource = lista;
             }
+            else
+            {
+                listaMarcas.DataSource = marcas;
+            }
+
+        }
+
+        private void onSelectionChange(object sender, EventArgs e)
+        {
+            labelCodigoMarca.Text = getMarcaSeleccionada().Codigo.ToString();
+            labelNombreMarca.Text = getMarcaSeleccionada().Nombre;
+        }
+
+        private void btnEliminarMarca_Click(object sender, EventArgs e)
+        {
+            frmDialogEliminarMarca form = new frmDialogEliminarMarca(getMarcaSeleccionada());
+            form.Owner= this;
+            form.ShowDialog();
         }
     }
 }

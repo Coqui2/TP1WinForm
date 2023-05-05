@@ -62,6 +62,7 @@
             this.textBoxNombreMarca.Name = "textBoxNombreMarca";
             this.textBoxNombreMarca.Size = new System.Drawing.Size(395, 23);
             this.textBoxNombreMarca.TabIndex = 7;
+            this.textBoxNombreMarca.KeyDown += new System.Windows.Forms.KeyEventHandler(this.onKeyDown);
             // 
             // btnAgregarMarca
             // 
@@ -74,6 +75,7 @@
             this.btnAgregarMarca.TabIndex = 20;
             this.btnAgregarMarca.Text = "AGREGAR MARCA";
             this.btnAgregarMarca.UseVisualStyleBackColor = false;
+            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
             // 
             // btnVolver
             // 
@@ -102,6 +104,7 @@
             this.Name = "frmDialogAgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Agregar una Marca";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.onFormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

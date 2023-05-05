@@ -63,6 +63,7 @@
             this.textBoxNombreMarca.Size = new System.Drawing.Size(418, 23);
             this.textBoxNombreMarca.TabIndex = 7;
             this.textBoxNombreMarca.Text = "NOMBRE_MARCA";
+            this.textBoxNombreMarca.KeyDown += new System.Windows.Forms.KeyEventHandler(this.onTxtBoxKeyDown);
             // 
             // btnModificarMarca
             // 
@@ -75,6 +76,7 @@
             this.btnModificarMarca.TabIndex = 21;
             this.btnModificarMarca.Text = "MODIFICAR MARCA";
             this.btnModificarMarca.UseVisualStyleBackColor = false;
+            this.btnModificarMarca.Click += new System.EventHandler(this.btnModificarMarca_Click);
             // 
             // btnVolver
             // 
@@ -103,6 +105,7 @@
             this.Name = "frmDialogEditarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Editar una Marca";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.onFormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
