@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Text.RegularExpressions;
 using Modelo;
-
 
 
 
@@ -21,8 +21,8 @@ namespace Controlador
             AccesoDatos datos = new AccesoDatos();
                 datos.SetConsulta("SELECT a.Id, a.Codigo, a.Nombre, a.Descripcion, a.precio,m.Id IdMarca, m.Descripcion Marca, c.Id IdCategoria, c.Descripcion Categoria " +
                     "from ARTICULOS A " +
-                    "Inner Join Marcas as m on A.IdMarca = M.Id " +
-                    "Inner Join CATEGORIAS as c on A.IdCategoria = C.Id");
+                    "Join Marcas as m on A.IdMarca = M.Id " +
+                    "Join CATEGORIAS as c on A.IdCategoria = C.Id");
                 datos.EjecutarLectura();
                 while (datos.Lector.Read())
                 {
@@ -37,10 +37,10 @@ namespace Controlador
                     aux.Categoria = new Categoria();
                     aux.Categoria.Codigo = (int)datos.Lector["IdCategoria"];
                     aux.Categoria.Nombre = (string)datos.Lector["Categoria"];
-                    aux.Precio = Convert.ToSingle(datos.Lector["Precio"]);
-                    lista.Add(aux);             
-                }         
-                return lista;    
+                    aux.Precio = decimal.Round((decimal)datos.Lector["Precio"],2);
+                    lista.Add(aux);
+                }
+                return lista;
         }
         
         public void agregar(Articulo articulo)
@@ -48,14 +48,15 @@ namespace Controlador
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                
+                string valorTexto = articulo.Precio.ToString();
+                valorTexto = Regex.Replace(valorTexto, "[,]", ".");
                 datos.SetConsulta("Insert into articulos values(@codigo,@nombre,@descripcion,@idmarca,@idcategoria,@precio)");
                 datos.setearParametro("@codigo", articulo.Codigo);
                 datos.setearParametro("@nombre", articulo.Nombre);
                 datos.setearParametro("@descripcion", articulo.Descripcion);
                 datos.setearParametro("@idmarca", articulo.Marca.Codigo);
                 datos.setearParametro("@idcategoria", articulo.Categoria.Codigo);
-                datos.setearParametro("@precio", articulo.Precio);
+                datos.setearParametro("@precio", valorTexto);
                 datos.EjecutarAccion();
             }
             catch (Exception ex)
@@ -89,13 +90,14 @@ namespace Controlador
             try
             {
 
-                datos.SetConsulta("Update articulos set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idmarca, IdCategoria = @idcategoria, Precio = @precio)");
+                datos.SetConsulta("Update articulos set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idmarca, IdCategoria = @idcategoria, Precio = @precio where Id=@id");
                 datos.setearParametro("@codigo", articulo.Codigo);
                 datos.setearParametro("@nombre", articulo.Nombre);
                 datos.setearParametro("@descripcion", articulo.Descripcion);
                 datos.setearParametro("@idmarca", articulo.Marca.Codigo);
                 datos.setearParametro("@idcategoria", articulo.Categoria.Codigo);
                 datos.setearParametro("@precio", articulo.Precio);
+                datos.setearParametro("@id", articulo.Id);
                 datos.EjecutarAccion();
             }
             catch (Exception ex)

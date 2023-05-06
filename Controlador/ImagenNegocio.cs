@@ -38,7 +38,7 @@ namespace Controlador
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetConsulta("Insert into categorias values(@idArticulo, @url)");
+                datos.SetConsulta("Insert into imagenes values(@idArticulo, @url)");
                 datos.setearParametro("@idArticulo", imagen.idArticulo);
                 datos.setearParametro("@url", imagen.url);
                 datos.EjecutarAccion();
