@@ -30,8 +30,16 @@ namespace TP1
 
         private void btnEliminarArticulo_Click(object sender, EventArgs e)
         {
-            //ArticuloNegocio negocio = new ArticuloNegocio();
-            //negocio.eliminar(artSeleccionado.Id);
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+              negocio.eliminar(artSeleccionado.Id);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
             MessageBox.Show("Articulo eliminado con exito");
             this.Close();
         }

@@ -41,13 +41,13 @@
             this.labelPrecioArt = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.textBoxMarcaArt = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBoxCategoriaArt = new System.Windows.Forms.TextBox();
+            this.pictureBoxImagenes = new System.Windows.Forms.PictureBox();
             this.btnProxImagen = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnImagenAnterior = new System.Windows.Forms.Button();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.btnModificarCategoria = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenes)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTituloArt
@@ -186,23 +186,24 @@
             this.textBoxMarcaArt.TabIndex = 26;
             this.textBoxMarcaArt.Text = "(MARCA)";
             // 
-            // textBox2
+            // textBoxCategoriaArt
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox2.Location = new System.Drawing.Point(35, 358);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(425, 23);
-            this.textBox2.TabIndex = 27;
-            this.textBox2.Text = "(CATEGORÍA)";
+            this.textBoxCategoriaArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBoxCategoriaArt.Location = new System.Drawing.Point(35, 358);
+            this.textBoxCategoriaArt.Name = "textBoxCategoriaArt";
+            this.textBoxCategoriaArt.ReadOnly = true;
+            this.textBoxCategoriaArt.Size = new System.Drawing.Size(425, 23);
+            this.textBoxCategoriaArt.TabIndex = 27;
+            this.textBoxCategoriaArt.Text = "(CATEGORÍA)";
             // 
-            // pictureBox1
+            // pictureBoxImagenes
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(35, 99);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxImagenes.Location = new System.Drawing.Point(35, 99);
+            this.pictureBoxImagenes.Name = "pictureBoxImagenes";
+            this.pictureBoxImagenes.Size = new System.Drawing.Size(150, 150);
+            this.pictureBoxImagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxImagenes.TabIndex = 28;
+            this.pictureBoxImagenes.TabStop = false;
             // 
             // btnProxImagen
             // 
@@ -214,17 +215,19 @@
             this.btnProxImagen.TabIndex = 29;
             this.btnProxImagen.Text = ">";
             this.btnProxImagen.UseVisualStyleBackColor = true;
+            this.btnProxImagen.Click += new System.EventHandler(this.btnProxImagen_Click);
             // 
-            // button1
+            // btnImagenAnterior
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(82, 255);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 23);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "<";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnImagenAnterior.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnImagenAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImagenAnterior.Location = new System.Drawing.Point(82, 255);
+            this.btnImagenAnterior.Name = "btnImagenAnterior";
+            this.btnImagenAnterior.Size = new System.Drawing.Size(25, 23);
+            this.btnImagenAnterior.TabIndex = 30;
+            this.btnImagenAnterior.Text = "<";
+            this.btnImagenAnterior.UseVisualStyleBackColor = true;
+            this.btnImagenAnterior.Click += new System.EventHandler(this.btnImagenAnterior_Click);
             // 
             // btnModificarArticulo
             // 
@@ -257,10 +260,10 @@
             this.ClientSize = new System.Drawing.Size(500, 650);
             this.Controls.Add(this.btnModificarCategoria);
             this.Controls.Add(this.btnModificarArticulo);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnImagenAnterior);
             this.Controls.Add(this.btnProxImagen);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.pictureBoxImagenes);
+            this.Controls.Add(this.textBoxCategoriaArt);
             this.Controls.Add(this.textBoxMarcaArt);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.labelPrecioArt);
@@ -278,7 +281,8 @@
             this.Name = "frmDialogVerArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Detalles (NOMBRE_ART)";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.frmDialogVerArticulo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,10 +303,10 @@
         private System.Windows.Forms.Label labelPrecioArt;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.TextBox textBoxMarcaArt;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBoxCategoriaArt;
+        private System.Windows.Forms.PictureBox pictureBoxImagenes;
         private System.Windows.Forms.Button btnProxImagen;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnImagenAnterior;
         private System.Windows.Forms.Button btnModificarArticulo;
         private System.Windows.Forms.Button btnModificarCategoria;
     }

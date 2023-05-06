@@ -33,18 +33,18 @@
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.btnAgregarArticulo = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbxArticulo = new System.Windows.Forms.PictureBox();
             this.labelNombreArticulo = new System.Windows.Forms.Label();
             this.labelCodigoArticulo = new System.Windows.Forms.Label();
             this.labelCategoria = new System.Windows.Forms.Label();
             this.labelPrecioArticulo = new System.Windows.Forms.Label();
             this.btnVerArticulo = new System.Windows.Forms.Button();
-            this.listaArticulos = new System.Windows.Forms.DataGridView();
+            this.dataGridArticulos = new System.Windows.Forms.DataGridView();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.txtBoxFiltro = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // labelListadoArticulos
@@ -95,19 +95,20 @@
             this.btnAgregarArticulo.UseVisualStyleBackColor = false;
             this.btnAgregarArticulo.Click += new System.EventHandler(this.btnAgregarArticulo_Click);
             // 
-            // pictureBox1
+            // pbxArticulo
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(592, 122);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(154, 93);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pbxArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbxArticulo.Location = new System.Drawing.Point(592, 122);
+            this.pbxArticulo.Name = "pbxArticulo";
+            this.pbxArticulo.Size = new System.Drawing.Size(154, 93);
+            this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxArticulo.TabIndex = 6;
+            this.pbxArticulo.TabStop = false;
             // 
             // labelNombreArticulo
             // 
             this.labelNombreArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNombreArticulo.AutoSize = true;
             this.labelNombreArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombreArticulo.Location = new System.Drawing.Point(588, 228);
             this.labelNombreArticulo.Name = "labelNombreArticulo";
@@ -118,7 +119,6 @@
             // labelCodigoArticulo
             // 
             this.labelCodigoArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelCodigoArticulo.AutoSize = true;
             this.labelCodigoArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodigoArticulo.Location = new System.Drawing.Point(588, 84);
             this.labelCodigoArticulo.Name = "labelCodigoArticulo";
@@ -129,7 +129,6 @@
             // labelCategoria
             // 
             this.labelCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelCategoria.AutoSize = true;
             this.labelCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategoria.Location = new System.Drawing.Point(588, 248);
             this.labelCategoria.Name = "labelCategoria";
@@ -140,7 +139,6 @@
             // labelPrecioArticulo
             // 
             this.labelPrecioArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPrecioArticulo.AutoSize = true;
             this.labelPrecioArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrecioArticulo.Location = new System.Drawing.Point(588, 268);
             this.labelPrecioArticulo.Name = "labelPrecioArticulo";
@@ -161,21 +159,22 @@
             this.btnVerArticulo.UseVisualStyleBackColor = false;
             this.btnVerArticulo.Click += new System.EventHandler(this.btnVerArticulo_Click);
             // 
-            // listaArticulos
+            // dataGridArticulos
             // 
-            this.listaArticulos.AllowUserToAddRows = false;
-            this.listaArticulos.AllowUserToDeleteRows = false;
-            this.listaArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridArticulos.AllowUserToAddRows = false;
+            this.dataGridArticulos.AllowUserToDeleteRows = false;
+            this.dataGridArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.listaArticulos.Location = new System.Drawing.Point(51, 122);
-            this.listaArticulos.MultiSelect = false;
-            this.listaArticulos.Name = "listaArticulos";
-            this.listaArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listaArticulos.Size = new System.Drawing.Size(515, 146);
-            this.listaArticulos.StandardTab = true;
-            this.listaArticulos.TabIndex = 1;
+            this.dataGridArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridArticulos.Location = new System.Drawing.Point(51, 122);
+            this.dataGridArticulos.MultiSelect = false;
+            this.dataGridArticulos.Name = "dataGridArticulos";
+            this.dataGridArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridArticulos.Size = new System.Drawing.Size(515, 146);
+            this.dataGridArticulos.StandardTab = true;
+            this.dataGridArticulos.TabIndex = 1;
+            this.dataGridArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridArticulos_CellContentClick);
             // 
             // lblFiltro
             // 
@@ -209,13 +208,13 @@
             this.ControlBox = false;
             this.Controls.Add(this.txtBoxFiltro);
             this.Controls.Add(this.lblFiltro);
-            this.Controls.Add(this.listaArticulos);
+            this.Controls.Add(this.dataGridArticulos);
             this.Controls.Add(this.btnVerArticulo);
             this.Controls.Add(this.labelPrecioArticulo);
             this.Controls.Add(this.labelCategoria);
             this.Controls.Add(this.labelCodigoArticulo);
             this.Controls.Add(this.labelNombreArticulo);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.btnModificarArticulo);
@@ -227,8 +226,8 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,13 +238,13 @@
         private System.Windows.Forms.Button btnModificarArticulo;
         private System.Windows.Forms.Button btnEliminarArticulo;
         private System.Windows.Forms.Button btnAgregarArticulo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxArticulo;
         private System.Windows.Forms.Label labelNombreArticulo;
         private System.Windows.Forms.Label labelCodigoArticulo;
         private System.Windows.Forms.Label labelCategoria;
         private System.Windows.Forms.Label labelPrecioArticulo;
         private System.Windows.Forms.Button btnVerArticulo;
-        private System.Windows.Forms.DataGridView listaArticulos;
+        private System.Windows.Forms.DataGridView dataGridArticulos;
         private System.Windows.Forms.Label lblFiltro;
         private System.Windows.Forms.TextBox txtBoxFiltro;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

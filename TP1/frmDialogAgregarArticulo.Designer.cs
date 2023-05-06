@@ -43,8 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxUrlImagenesArt = new System.Windows.Forms.TextBox();
             this.labelPrecioArt = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnBuscarArtCodigo = new System.Windows.Forms.Button();
+            this.textBoxPrecioArt = new System.Windows.Forms.TextBox();
+            this.btnAgregarArticulo = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -76,6 +76,7 @@
             this.textBoxCodigoArt.Name = "textBoxCodigoArt";
             this.textBoxCodigoArt.Size = new System.Drawing.Size(133, 23);
             this.textBoxCodigoArt.TabIndex = 5;
+            this.textBoxCodigoArt.Leave += new System.EventHandler(this.textBoxCodigoArt_Leave);
             // 
             // labelNombreArt
             // 
@@ -94,6 +95,7 @@
             this.textBoxNombreArt.Name = "textBoxNombreArt";
             this.textBoxNombreArt.Size = new System.Drawing.Size(264, 23);
             this.textBoxNombreArt.TabIndex = 7;
+            this.textBoxNombreArt.Leave += new System.EventHandler(this.textBoxNombreArt_Leave);
             // 
             // labelDescripcionArt
             // 
@@ -132,6 +134,7 @@
             this.comboBoxMarcasArt.Name = "comboBoxMarcasArt";
             this.comboBoxMarcasArt.Size = new System.Drawing.Size(425, 24);
             this.comboBoxMarcasArt.TabIndex = 11;
+            this.comboBoxMarcasArt.Leave += new System.EventHandler(this.comboBoxMarcasArt_Leave);
             // 
             // comboBoxCategoriaArt
             // 
@@ -141,6 +144,7 @@
             this.comboBoxCategoriaArt.Name = "comboBoxCategoriaArt";
             this.comboBoxCategoriaArt.Size = new System.Drawing.Size(425, 24);
             this.comboBoxCategoriaArt.TabIndex = 13;
+            this.comboBoxCategoriaArt.Leave += new System.EventHandler(this.comboBoxCategoriaArt_Leave);
             // 
             // labelCategoriaArt
             // 
@@ -191,25 +195,27 @@
             this.labelPrecioArt.TabIndex = 18;
             this.labelPrecioArt.Text = "Precio de venta:";
             // 
-            // textBox1
+            // textBoxPrecioArt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.textBox1.Location = new System.Drawing.Point(249, 520);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(103, 32);
-            this.textBox1.TabIndex = 19;
+            this.textBoxPrecioArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.textBoxPrecioArt.Location = new System.Drawing.Point(249, 520);
+            this.textBoxPrecioArt.Name = "textBoxPrecioArt";
+            this.textBoxPrecioArt.Size = new System.Drawing.Size(103, 32);
+            this.textBoxPrecioArt.TabIndex = 19;
+            this.textBoxPrecioArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioArt_KeyPress);
             // 
-            // btnBuscarArtCodigo
+            // btnAgregarArticulo
             // 
-            this.btnBuscarArtCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarArtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btnBuscarArtCodigo.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btnBuscarArtCodigo.Location = new System.Drawing.Point(191, 586);
-            this.btnBuscarArtCodigo.Name = "btnBuscarArtCodigo";
-            this.btnBuscarArtCodigo.Size = new System.Drawing.Size(269, 32);
-            this.btnBuscarArtCodigo.TabIndex = 20;
-            this.btnBuscarArtCodigo.Text = "AGREGAR ARTÍCULO";
-            this.btnBuscarArtCodigo.UseVisualStyleBackColor = false;
+            this.btnAgregarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnAgregarArticulo.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(191, 586);
+            this.btnAgregarArticulo.Name = "btnAgregarArticulo";
+            this.btnAgregarArticulo.Size = new System.Drawing.Size(269, 32);
+            this.btnAgregarArticulo.TabIndex = 20;
+            this.btnAgregarArticulo.Text = "ACEPTAR";
+            this.btnAgregarArticulo.UseVisualStyleBackColor = false;
+            this.btnAgregarArticulo.Click += new System.EventHandler(this.btnAgregarArticulo_Click);
             // 
             // label2
             // 
@@ -241,8 +247,8 @@
             this.ClientSize = new System.Drawing.Size(500, 650);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnBuscarArtCodigo);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnAgregarArticulo);
+            this.Controls.Add(this.textBoxPrecioArt);
             this.Controls.Add(this.labelPrecioArt);
             this.Controls.Add(this.textBoxUrlImagenesArt);
             this.Controls.Add(this.label1);
@@ -262,6 +268,7 @@
             this.Name = "frmDialogAgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Agregar un Artículo";
+            this.Load += new System.EventHandler(this.frmDialogAgregarArticulo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,8 +291,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxUrlImagenesArt;
         private System.Windows.Forms.Label labelPrecioArt;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnBuscarArtCodigo;
+        private System.Windows.Forms.TextBox textBoxPrecioArt;
+        private System.Windows.Forms.Button btnAgregarArticulo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnVolver;
     }

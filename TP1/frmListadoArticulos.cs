@@ -18,17 +18,27 @@ namespace TP1
     {
         
         private List<Articulo> lista;
-        private Articulo getArticuloActivo() { return (Articulo)listaArticulos.CurrentRow.DataBoundItem;}
+        private Articulo getArticuloActivo() { return (Articulo)dataGridArticulos.CurrentRow.DataBoundItem;}
         private void cargarLista()
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            lista = negocio.listar();
+            try
+            {
+                lista = negocio.listar();
+                dataGridArticulos.DataSource = lista;
+                dataGridArticulos.Columns["Id"].Visible = false;
+                cargarPreview(getArticuloActivo());
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
         }
         public Form2()
         {
             InitializeComponent();
-            this.Controls.Add(listaArticulos);
+            this.Controls.Add(dataGridArticulos);
             this.Load += Form2_Load;
         }
 
@@ -38,8 +48,31 @@ namespace TP1
             this.AutoSize = false;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             cargarLista();
-            listaArticulos.DataSource = lista;
-            
+        }
+
+        void cargarPreview(Articulo seleccionado)
+        {
+            ImagenNegocio imagenNegocio = new ImagenNegocio();
+            List<Imagen> imagenes = imagenNegocio.listarPorIdArticulo(seleccionado.Id);
+            try
+            {
+                if (imagenes != null)
+                {
+                    pbxArticulo.Load(imagenes[0].url);
+                } else
+                {
+                    pbxArticulo.Load("https://previews.123rf.com/images/freshwater/freshwater1711/freshwater171100021/89104479-p%C3%ADxel-404-p%C3%A1gina-de-error-p%C3%A1gina-no-encontrada.jpg");
+                }
+                labelCodigoArticulo.Text = $"Cod. #{seleccionado.Codigo}";
+                labelNombreArticulo.Text = seleccionado.Nombre;
+                labelCategoria.Text = seleccionado.Categoria.Nombre;
+                labelPrecioArticulo.Text = $"${seleccionado.Precio}";
+            }
+            catch (Exception ex)
+            {
+                pbxArticulo.Load("https://previews.123rf.com/images/freshwater/freshwater1711/freshwater171100021/89104479-p%C3%ADxel-404-p%C3%A1gina-de-error-p%C3%A1gina-no-encontrada.jpg");
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -51,32 +84,40 @@ namespace TP1
         {
             List<Articulo> listaFiltrada;
             listaFiltrada = lista.FindAll(x => x.Nombre.ToUpper().Contains(txtBoxFiltro.Text.ToUpper()) || x.Codigo.ToUpper().Contains(txtBoxFiltro.Text.ToUpper()));
-            listaArticulos.DataSource= listaFiltrada;
+            dataGridArticulos.DataSource= listaFiltrada;
         }
 
         private void btnAgregarArticulo_Click(object sender, EventArgs e)
         {
             frmDialogAgregarArticulo form = new frmDialogAgregarArticulo();
             form.ShowDialog();
+            cargarLista();
         }
 
         private void btnVerArticulo_Click(object sender, EventArgs e)
         {
-            frmDialogVerArticulo form = new frmDialogVerArticulo();
+            frmDialogVerArticulo form = new frmDialogVerArticulo(getArticuloActivo());
             form.ShowDialog();
+            cargarLista();
         }
 
         private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
-            frmDialogEditarArticulo form = new frmDialogEditarArticulo();
+            frmDialogAgregarArticulo form = new frmDialogAgregarArticulo(getArticuloActivo());
             form.ShowDialog();
+            cargarLista();
         }
 
         private void btnEliminarArticulo_Click(object sender, EventArgs e)
         {
             frmDialogEliminarArticulo form = new frmDialogEliminarArticulo(getArticuloActivo());
             form.ShowDialog();
+            cargarLista();
         }
 
+        private void dataGridArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cargarPreview(getArticuloActivo());
+        }
     }
 }
