@@ -19,5 +19,6 @@ namespace Modelo
             this.idArticulo = idArticulo;
             this.url = url;
         }
+        public Imagen(int idArticulo, string url) { this.idArticulo = idArticulo; this.url = url; }
     }
 }

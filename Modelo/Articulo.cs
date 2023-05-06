@@ -15,11 +15,11 @@ namespace Modelo
         Marca marca;
         Categoria categoria;
         List<string> imagenes = new List<string>();
-        private float precio;
+        private decimal precio;
 
-        public Articulo(int id,string codigo, string nombre, string descripcion, Marca marca, Categoria categoria, List<string> imagenes, float precio)
+        public Articulo(int id,string codigo, string nombre, string descripcion, Marca marca, Categoria categoria, List<string> imagenes, decimal precio, Imagen imagen)
         {
-            this.id= id;
+            this.id = id;
             this.codigo = codigo;
             this.nombre = nombre;
             this.descripcion = descripcion;
@@ -49,7 +49,7 @@ namespace Modelo
             get { return descripcion; }
             set { descripcion = value; }
         }
-        public float Precio
+        public decimal Precio
         {
             get { return precio; }
             set { precio = value; }
