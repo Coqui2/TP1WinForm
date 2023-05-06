@@ -97,5 +97,7 @@ namespace TP1
             form.Owner= this;
             form.ShowDialog();
         }
+
+
     }
 }

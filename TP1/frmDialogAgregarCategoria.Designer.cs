@@ -62,6 +62,7 @@
             this.textBoxNombreCategoria.Name = "textBoxNombreCategoria";
             this.textBoxNombreCategoria.Size = new System.Drawing.Size(395, 23);
             this.textBoxNombreCategoria.TabIndex = 7;
+            this.textBoxNombreCategoria.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxNombreCategoria_KeyDown);
             // 
             // btnAgregarCategoria
             // 
@@ -102,6 +103,7 @@
             this.Name = "frmDialogAgregarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Agregar una Categoría";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDialogAgregarCategoria_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

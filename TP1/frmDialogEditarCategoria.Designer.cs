@@ -63,6 +63,7 @@
             this.textBoxNombreCategoria.Size = new System.Drawing.Size(418, 23);
             this.textBoxNombreCategoria.TabIndex = 7;
             this.textBoxNombreCategoria.Text = "NOMBRE_CATEGORIA";
+            this.textBoxNombreCategoria.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxNombreCategoria_KeyDown);
             // 
             // btnModificarCategoria
             // 
@@ -75,6 +76,7 @@
             this.btnModificarCategoria.TabIndex = 21;
             this.btnModificarCategoria.Text = "MODIFICAR CATEGORÍA";
             this.btnModificarCategoria.UseVisualStyleBackColor = false;
+            this.btnModificarCategoria.Click += new System.EventHandler(this.btnModificarCategoria_Click);
             // 
             // btnVolver
             // 
@@ -85,7 +87,7 @@
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(126, 32);
             this.btnVolver.TabIndex = 22;
-            this.btnVolver.Text = "VOLVER MARCA";
+            this.btnVolver.Text = "VOLVER CATEGORIA";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
@@ -103,6 +105,7 @@
             this.Name = "frmDialogEditarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Editar Categoría";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDialogEditarCategoria_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

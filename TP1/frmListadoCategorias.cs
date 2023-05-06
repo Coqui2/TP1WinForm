@@ -16,30 +16,24 @@ namespace TP1
 {
     public partial class frmListadoCategorias : Form
     {
-        public List<Categoria> listar()
+        private List<Categoria> categorias;
+        private List<Categoria> lista;
+
+        private void cargarLista()
         {
-            List<Categoria> lista = new List<Categoria>();
-
-            AccesoDatos accesoDatos = new AccesoDatos();
-            accesoDatos.SetConsulta("SELECT C.Id, C.Descripcion FROM CATEGORIAS C");
-            accesoDatos.EjecutarLectura();
-
-            while (accesoDatos.Lector.Read())
-            {
-                Categoria aux = new Categoria();
-                aux.Codigo = (int)accesoDatos.Lector["Id"];
-                aux.Nombre = (string)accesoDatos.Lector["Descripcion"];
-
-                lista.Add(aux);
-            }
-            accesoDatos.CerrarConexion();
-            return lista;
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            categorias = negocio.listar();
         }
+
+        private Categoria getCategoriaSeleccionada()
+        {
+            return (Categoria)listaCategorias.CurrentRow.DataBoundItem;
+        }
+
         public frmListadoCategorias()
         {
             InitializeComponent();
-            this.Controls.Add(listaCategoria);
-            listaCategoria.View= View.Details;
+            this.Controls.Add(listaCategorias);
             this.Load += Form5_Load;
         }
 
@@ -48,39 +42,64 @@ namespace TP1
             this.Dock = DockStyle.Fill;
             this.AutoSize = false;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cargarLista();
+            lista = categorias;
+            listaCategorias.DataSource = lista;
 
-            listaCategoria.Columns.Add("Codigo", -2, HorizontalAlignment.Left);
-            listaCategoria.Columns.Add("Nombre", -2, HorizontalAlignment.Left);
-            List<Categoria> categorias = new List<Categoria>();
-            categorias = listar();   
-            
+        }
+        private void textBoxFiltro_TextChanged(object sender, EventArgs e)
+        {
+            lista = categorias.FindAll(x => x.Nombre.ToUpper().Contains(textBoxFiltro.Text.ToUpper()));
+            listaCategorias.DataSource = lista;
+        }
 
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            frmDialogAgregarCategoria form = new frmDialogAgregarCategoria();
+            form.Owner = this;
+            form.ShowDialog();
+        }
 
-            foreach (Categoria categoria in categorias)
+        private void btnModificarCategoria_Click(object sender, EventArgs e)
+        {
+            frmDialogEditarCategoria form = new frmDialogEditarCategoria(getCategoriaSeleccionada());
+            form.Owner = this;
+            form.ShowDialog();
+        }
+
+        public void reload()
+        {
+            cargarLista();
+            if (textBoxFiltro.Text != "")
             {
-                ListViewItem item;
-                item = new ListViewItem(new[] { categoria.Codigo.ToString(), categoria.Nombre });
-                listaCategoria.Items.Add(item);
+                lista = categorias.FindAll(x => x.Nombre.ToUpper().Contains(textBoxFiltro.Text.ToUpper()));
+                listaCategorias.DataSource = lista;
             }
-
-           
+            else
+            {
+                listaCategorias.DataSource = categorias;
+            }
 
         }
 
-        private void listaMarcas_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnEliminarCategoria_Click(object sender, EventArgs e)
         {
-            List<Categoria> categorias = new List<Categoria>();
-            categorias = listar();
-            if(listaCategoria.SelectedIndices.Count > 0)
-            {
-                int index = listaCategoria.FocusedItem.Index;
+            frmDialogEliminarCategoria form = new frmDialogEliminarCategoria(getCategoriaSeleccionada());
+            form.Owner = this;
+            form.ShowDialog();
+        }
 
-                int codigo = categorias[index].Codigo;
-                labelCodigoCategoria.Text = "Código Categoría #" + codigo;
+        private void listaCategorias_SelectionChanged(object sender, EventArgs e)
+        {
+            labelCodigoCategoria.Text = getCategoriaSeleccionada().Codigo.ToString();
+            labelNombreCategoria.Text = getCategoriaSeleccionada().Nombre;
+        }
 
-                string nombre = categorias[index].Nombre;
-                labelNombreCategoria.Text = nombre;
-            }
+        private void btnRestablecer_Click(object sender, EventArgs e)
+        {
+            textBoxFiltro.Text = "";
+            textBoxFiltro.Focus();
+
         }
     }
 }

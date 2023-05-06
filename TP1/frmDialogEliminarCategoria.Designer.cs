@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.labelEliminarCategoria = new System.Windows.Forms.Label();
-            this.labelNombreCategoria = new System.Windows.Forms.Label();
-            this.btnModificarCategoria = new System.Windows.Forms.Button();
+            this.labelConfirmacionEliminar = new System.Windows.Forms.Label();
+            this.btnEliminarCategoria = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,27 +44,28 @@
             this.labelEliminarCategoria.TabIndex = 3;
             this.labelEliminarCategoria.Text = "Eliminar Categoría";
             // 
-            // labelNombreCategoria
+            // labelConfirmacionEliminar
             // 
-            this.labelNombreCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.labelNombreCategoria.Location = new System.Drawing.Point(42, 92);
-            this.labelNombreCategoria.Name = "labelNombreCategoria";
-            this.labelNombreCategoria.Size = new System.Drawing.Size(418, 45);
-            this.labelNombreCategoria.TabIndex = 6;
-            this.labelNombreCategoria.Text = "¿Desea eliminar la categoría (NOMBRE_CAT)?";
-            this.labelNombreCategoria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelConfirmacionEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
+            this.labelConfirmacionEliminar.Location = new System.Drawing.Point(42, 92);
+            this.labelConfirmacionEliminar.Name = "labelConfirmacionEliminar";
+            this.labelConfirmacionEliminar.Size = new System.Drawing.Size(418, 45);
+            this.labelConfirmacionEliminar.TabIndex = 6;
+            this.labelConfirmacionEliminar.Text = "¿Desea eliminar la categoría (NOMBRE_CAT)?";
+            this.labelConfirmacionEliminar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnModificarCategoria
+            // btnEliminarCategoria
             // 
-            this.btnModificarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btnModificarCategoria.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnModificarCategoria.Location = new System.Drawing.Point(191, 151);
-            this.btnModificarCategoria.Name = "btnModificarCategoria";
-            this.btnModificarCategoria.Size = new System.Drawing.Size(269, 32);
-            this.btnModificarCategoria.TabIndex = 21;
-            this.btnModificarCategoria.Text = "ELIMINAR CATEGORÍA";
-            this.btnModificarCategoria.UseVisualStyleBackColor = false;
+            this.btnEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnEliminarCategoria.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(191, 151);
+            this.btnEliminarCategoria.Name = "btnEliminarCategoria";
+            this.btnEliminarCategoria.Size = new System.Drawing.Size(269, 32);
+            this.btnEliminarCategoria.TabIndex = 21;
+            this.btnEliminarCategoria.Text = "ELIMINAR CATEGORÍA";
+            this.btnEliminarCategoria.UseVisualStyleBackColor = false;
+            this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
             // 
             // btnVolver
             // 
@@ -85,13 +86,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 216);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.btnModificarCategoria);
-            this.Controls.Add(this.labelNombreCategoria);
+            this.Controls.Add(this.btnEliminarCategoria);
+            this.Controls.Add(this.labelConfirmacionEliminar);
             this.Controls.Add(this.labelEliminarCategoria);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmDialogEliminarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Eliminar Categoría";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDialogEliminarCategoria_FormClosed);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmDialogEliminarCategoria_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,8 +103,8 @@
         #endregion
 
         private System.Windows.Forms.Label labelEliminarCategoria;
-        private System.Windows.Forms.Label labelNombreCategoria;
-        private System.Windows.Forms.Button btnModificarCategoria;
+        private System.Windows.Forms.Label labelConfirmacionEliminar;
+        private System.Windows.Forms.Button btnEliminarCategoria;
         private System.Windows.Forms.Button btnVolver;
     }
 }

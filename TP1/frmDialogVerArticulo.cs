@@ -22,6 +22,7 @@ namespace TP1
         {
             InitializeComponent();
             this.articulo = articulo;
+            this.Text = "Detalles de " + articulo.Nombre + "";
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -57,8 +58,14 @@ namespace TP1
             {
                 indiceImagenActual = imagenes.Count - 1;
             }
-
-            pictureBoxImagenes.Load(imagenes[indiceImagenActual].url);
+            try
+            {
+                pictureBoxImagenes.Load(imagenes[indiceImagenActual].url);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnProxImagen_Click(object sender, EventArgs e)
@@ -68,7 +75,14 @@ namespace TP1
             {
                 indiceImagenActual = 0;
             }
-            pictureBoxImagenes.Load(imagenes[indiceImagenActual].url);
+            try
+            {
+                pictureBoxImagenes.Load(imagenes[indiceImagenActual].url);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

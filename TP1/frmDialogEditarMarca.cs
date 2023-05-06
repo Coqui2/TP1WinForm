@@ -27,7 +27,10 @@ namespace TP1
         {
             InitializeComponent();
             marcaSeleccionada = aux;
+
             textBoxNombreMarca.Text = marcaSeleccionada.Nombre;
+            this.Text = "Editar Marca " + marcaSeleccionada.Nombre + "";
+
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

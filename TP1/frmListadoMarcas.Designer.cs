@@ -35,7 +35,7 @@
             this.labelNombreMarca = new System.Windows.Forms.Label();
             this.labelCodigoMarca = new System.Windows.Forms.Label();
             this.listaMarcas = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelFiltro = new System.Windows.Forms.Label();
             this.textBoxFiltro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.btnModificarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarMarca.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnModificarMarca.Location = new System.Drawing.Point(358, 298);
+            this.btnModificarMarca.Location = new System.Drawing.Point(358, 308);
             this.btnModificarMarca.Name = "btnModificarMarca";
             this.btnModificarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnModificarMarca.TabIndex = 4;
@@ -70,7 +70,7 @@
             this.btnEliminarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarMarca.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnEliminarMarca.Location = new System.Drawing.Point(453, 298);
+            this.btnEliminarMarca.Location = new System.Drawing.Point(453, 308);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarMarca.TabIndex = 5;
@@ -82,7 +82,7 @@
             // 
             this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarMarca.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnAgregarMarca.Location = new System.Drawing.Point(51, 298);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(51, 308);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(123, 23);
             this.btnAgregarMarca.TabIndex = 3;
@@ -94,7 +94,7 @@
             // 
             this.labelNombreMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelNombreMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombreMarca.Location = new System.Drawing.Point(606, 146);
+            this.labelNombreMarca.Location = new System.Drawing.Point(602, 155);
             this.labelNombreMarca.Name = "labelNombreMarca";
             this.labelNombreMarca.Size = new System.Drawing.Size(119, 20);
             this.labelNombreMarca.TabIndex = 7;
@@ -104,7 +104,7 @@
             // 
             this.labelCodigoMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCodigoMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCodigoMarca.Location = new System.Drawing.Point(606, 105);
+            this.labelCodigoMarca.Location = new System.Drawing.Point(602, 114);
             this.labelCodigoMarca.Name = "labelCodigoMarca";
             this.labelCodigoMarca.Size = new System.Drawing.Size(80, 24);
             this.labelCodigoMarca.TabIndex = 8;
@@ -120,7 +120,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listaMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.listaMarcas.Location = new System.Drawing.Point(51, 104);
+            this.listaMarcas.Location = new System.Drawing.Point(51, 114);
             this.listaMarcas.MultiSelect = false;
             this.listaMarcas.Name = "listaMarcas";
             this.listaMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -129,14 +129,14 @@
             this.listaMarcas.TabIndex = 1;
             this.listaMarcas.SelectionChanged += new System.EventHandler(this.onSelectionChange);
             // 
-            // label1
+            // labelFiltro
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Filtro:";
+            this.labelFiltro.AutoSize = true;
+            this.labelFiltro.Location = new System.Drawing.Point(52, 85);
+            this.labelFiltro.Name = "labelFiltro";
+            this.labelFiltro.Size = new System.Drawing.Size(32, 13);
+            this.labelFiltro.TabIndex = 10;
+            this.labelFiltro.Text = "Filtro:";
             // 
             // textBoxFiltro
             // 
@@ -150,7 +150,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(568, 105);
+            this.label2.Location = new System.Drawing.Point(534, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 24);
             this.label2.TabIndex = 12;
@@ -160,7 +160,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(528, 146);
+            this.label3.Location = new System.Drawing.Point(534, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 20);
             this.label3.TabIndex = 11;
@@ -176,7 +176,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxFiltro);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelFiltro);
             this.Controls.Add(this.listaMarcas);
             this.Controls.Add(this.labelCodigoMarca);
             this.Controls.Add(this.labelNombreMarca);
@@ -205,7 +205,7 @@
         private System.Windows.Forms.Label labelNombreMarca;
         private System.Windows.Forms.Label labelCodigoMarca;
         private System.Windows.Forms.DataGridView listaMarcas;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelFiltro;
         private System.Windows.Forms.TextBox textBoxFiltro;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
