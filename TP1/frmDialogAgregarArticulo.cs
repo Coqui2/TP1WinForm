@@ -190,5 +190,10 @@ namespace TP1
             if ((e.KeyChar < 48 || e.KeyChar > 59 || e.KeyChar == 46) && e.KeyChar != 8 && e.KeyChar != 44)
                 e.Handled = true;
         }
+
+        private void frmDialogAgregarArticulo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //actualizar listado articulos
+        }
     }
 }

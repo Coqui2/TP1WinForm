@@ -46,13 +46,13 @@ namespace TP1
 
         private Categoria getCategoriaSeleccionada()
         {
-            return (Categoria)listaCategorias.CurrentRow.DataBoundItem;
+            return (Categoria)dataGrisCategorias.CurrentRow.DataBoundItem;
         }
 
         public frmListadoCategorias()
         {
             InitializeComponent();
-            this.Controls.Add(listaCategorias);
+            this.Controls.Add(dataGrisCategorias);
             this.Load += Form5_Load;
         }
 
@@ -63,13 +63,13 @@ namespace TP1
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             cargarLista();
             lista = categorias;
-            listaCategorias.DataSource = lista;
+            dataGrisCategorias.DataSource = lista;
 
         }
         private void textBoxFiltro_TextChanged(object sender, EventArgs e)
         {
             lista = categorias.FindAll(x => x.Nombre.ToUpper().Contains(textBoxFiltro.Text.ToUpper()));
-            listaCategorias.DataSource = lista;
+            dataGrisCategorias.DataSource = lista;
         }
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
@@ -92,11 +92,11 @@ namespace TP1
             if (textBoxFiltro.Text != "")
             {
                 lista = categorias.FindAll(x => x.Nombre.ToUpper().Contains(textBoxFiltro.Text.ToUpper()));
-                listaCategorias.DataSource = lista;
+                dataGrisCategorias.DataSource = lista;
             }
             else
             {
-                listaCategorias.DataSource = categorias;
+                dataGrisCategorias.DataSource = categorias;
             }
 
         }
@@ -117,6 +117,11 @@ namespace TP1
         private void listaCategorias_SelectionChanged(object sender, EventArgs e)
         {
             cargarListaArticulos();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            reload();
         }
     }
 }

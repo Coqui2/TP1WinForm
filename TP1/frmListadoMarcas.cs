@@ -20,10 +20,29 @@ namespace TP1
         private List<Marca> marcas;
         private List<Marca> lista;
 
+        private List<Articulo> listaArticulos;
+
+
         private void cargarLista()
         {
             MarcaNegocio negocio = new MarcaNegocio();
             marcas = negocio.listarMarcas();
+        }
+
+        private void cargarListaArticulos()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                listaArticulos = negocio.listar(getMarcaSeleccionada());
+                dataGridArticulosPorCategoria.DataSource = listaArticulos;
+                dataGridArticulosPorCategoria.Columns["Id"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            labelListadoArt.Text = "Listado de Artículos con Categoría " + getMarcaSeleccionada().Nombre;
         }
 
         private Marca getMarcaSeleccionada()
@@ -85,12 +104,6 @@ namespace TP1
 
         }
 
-        private void onSelectionChange(object sender, EventArgs e)
-        {
-            labelCodigoMarca.Text = getMarcaSeleccionada().Codigo.ToString();
-            labelNombreMarca.Text = getMarcaSeleccionada().Nombre;
-        }
-
         private void btnEliminarMarca_Click(object sender, EventArgs e)
         {
             frmDialogEliminarMarca form = new frmDialogEliminarMarca(getMarcaSeleccionada());
@@ -98,6 +111,15 @@ namespace TP1
             form.ShowDialog();
         }
 
+        private void listaMarcas_SelectionChanged(object sender, EventArgs e)
+        {
+            cargarListaArticulos(); 
+        }
 
+        private void btnRestablecer_Click(object sender, EventArgs e)
+        {
+            textBoxFiltro.Text = "";
+            textBoxFiltro.Focus();
+        }
     }
 }

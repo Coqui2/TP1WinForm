@@ -268,6 +268,7 @@
             this.Name = "frmDialogAgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Agregar un Artículo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDialogAgregarArticulo_FormClosing);
             this.Load += new System.EventHandler(this.frmDialogAgregarArticulo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

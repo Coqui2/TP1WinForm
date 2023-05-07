@@ -57,6 +57,21 @@ namespace TP1
             comboBoxCampo.Items.Add("Marca");
             comboBoxCampo.Items.Add("Precio");
         }
+        public void reload()
+        {
+            cargarLista();
+            if (textBoxFiltro.Text != "")
+            {
+                List<Articulo> listaFiltrada;
+                listaFiltrada = lista.FindAll(x => x.Nombre.ToUpper().Contains(textBoxFiltro.Text.ToUpper()) || x.Codigo.ToUpper().Contains(textBoxFiltro.Text.ToUpper()));
+                dataGridArticulos.DataSource = listaFiltrada;
+            }
+            else
+            {
+                dataGridArticulos.DataSource = lista;
+            }
+
+        }
 
         void cargarPreview(Articulo seleccionado)
         {
@@ -91,7 +106,7 @@ namespace TP1
         private void onTxtChange(object sender, EventArgs e)
         {
             List<Articulo> listaFiltrada;
-            listaFiltrada = lista.FindAll(x => x.Nombre.ToUpper().Contains(txtBoxFiltro.Text.ToUpper()) || x.Codigo.ToUpper().Contains(txtBoxFiltro.Text.ToUpper()));
+            listaFiltrada = lista.FindAll(x => x.Nombre.ToUpper().Contains(textBoxFiltro.Text.ToUpper()) || x.Codigo.ToUpper().Contains(textBoxFiltro.Text.ToUpper()));
             dataGridArticulos.DataSource= listaFiltrada;
         }
 
@@ -99,28 +114,24 @@ namespace TP1
         {
             frmDialogAgregarArticulo form = new frmDialogAgregarArticulo();
             form.ShowDialog();
-            cargarLista();
         }
 
         private void btnVerArticulo_Click(object sender, EventArgs e)
         {
             frmDialogVerArticulo form = new frmDialogVerArticulo(getArticuloActivo());
             form.ShowDialog();
-            cargarLista();
         }
 
         private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
             frmDialogAgregarArticulo form = new frmDialogAgregarArticulo(getArticuloActivo());
             form.ShowDialog();
-            cargarLista();
         }
 
         private void btnEliminarArticulo_Click(object sender, EventArgs e)
         {
             frmDialogEliminarArticulo form = new frmDialogEliminarArticulo(getArticuloActivo());
             form.ShowDialog();
-            cargarLista();
         }
 
 
@@ -205,6 +216,18 @@ namespace TP1
         private void dataGridArticulos_SelectionChanged(object sender, EventArgs e)
         {
             cargarPreview(getArticuloActivo());
+        }
+
+        private void dataGridArticulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmDialogVerArticulo form = new frmDialogVerArticulo(getArticuloActivo());
+            form.ShowDialog();
+        }
+
+        private void btnRestablecer_Click(object sender, EventArgs e)
+        {
+            textBoxFiltro.Text = "";
+            textBoxFiltro.Focus();
         }
     }
 }

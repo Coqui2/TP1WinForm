@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelListadoArticulos = new System.Windows.Forms.Label();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             this.btnVerArticulo = new System.Windows.Forms.Button();
             this.dataGridArticulos = new System.Windows.Forms.DataGridView();
             this.lblFiltro = new System.Windows.Forms.Label();
-            this.txtBoxFiltro = new System.Windows.Forms.TextBox();
+            this.textBoxFiltro = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.labelCampo = new System.Windows.Forms.Label();
             this.comboBoxCampo = new System.Windows.Forms.ComboBox();
@@ -51,6 +52,7 @@
             this.textBoxFiltroAvanzado = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.labelFiltrado = new System.Windows.Forms.Label();
+            this.btnRestablecer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridArticulos)).BeginInit();
             this.SuspendLayout();
@@ -162,7 +164,7 @@
             this.btnVerArticulo.Location = new System.Drawing.Point(627, 318);
             this.btnVerArticulo.Name = "btnVerArticulo";
             this.btnVerArticulo.Size = new System.Drawing.Size(123, 23);
-            this.btnVerArticulo.TabIndex = 7;
+            this.btnVerArticulo.TabIndex = 2;
             this.btnVerArticulo.Text = "Ver detalles";
             this.btnVerArticulo.UseVisualStyleBackColor = false;
             this.btnVerArticulo.Click += new System.EventHandler(this.btnVerArticulo_Click);
@@ -171,17 +173,35 @@
             // 
             this.dataGridArticulos.AllowUserToAddRows = false;
             this.dataGridArticulos.AllowUserToDeleteRows = false;
+            this.dataGridArticulos.AllowUserToResizeColumns = false;
+            this.dataGridArticulos.AllowUserToResizeRows = false;
             this.dataGridArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridArticulos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridArticulos.Location = new System.Drawing.Point(51, 122);
+            this.dataGridArticulos.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridArticulos.Location = new System.Drawing.Point(51, 120);
             this.dataGridArticulos.MultiSelect = false;
             this.dataGridArticulos.Name = "dataGridArticulos";
+            this.dataGridArticulos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridArticulos.Size = new System.Drawing.Size(549, 146);
             this.dataGridArticulos.StandardTab = true;
             this.dataGridArticulos.TabIndex = 1;
+            this.dataGridArticulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridArticulos_CellDoubleClick);
             this.dataGridArticulos.SelectionChanged += new System.EventHandler(this.dataGridArticulos_SelectionChanged);
             // 
             // lblFiltro
@@ -193,13 +213,13 @@
             this.lblFiltro.TabIndex = 13;
             this.lblFiltro.Text = "Buscar por código o nombre: ";
             // 
-            // txtBoxFiltro
+            // textBoxFiltro
             // 
-            this.txtBoxFiltro.Location = new System.Drawing.Point(205, 91);
-            this.txtBoxFiltro.Name = "txtBoxFiltro";
-            this.txtBoxFiltro.Size = new System.Drawing.Size(251, 20);
-            this.txtBoxFiltro.TabIndex = 2;
-            this.txtBoxFiltro.TextChanged += new System.EventHandler(this.onTxtChange);
+            this.textBoxFiltro.Location = new System.Drawing.Point(205, 91);
+            this.textBoxFiltro.Name = "textBoxFiltro";
+            this.textBoxFiltro.Size = new System.Drawing.Size(251, 20);
+            this.textBoxFiltro.TabIndex = 0;
+            this.textBoxFiltro.TextChanged += new System.EventHandler(this.onTxtChange);
             // 
             // contextMenuStrip1
             // 
@@ -223,7 +243,7 @@
             this.comboBoxCampo.Location = new System.Drawing.Point(54, 390);
             this.comboBoxCampo.Name = "comboBoxCampo";
             this.comboBoxCampo.Size = new System.Drawing.Size(104, 21);
-            this.comboBoxCampo.TabIndex = 15;
+            this.comboBoxCampo.TabIndex = 6;
             this.comboBoxCampo.SelectedIndexChanged += new System.EventHandler(this.comboBoxCampo_SelectedIndexChanged);
             // 
             // comboBoxCriterio
@@ -233,7 +253,7 @@
             this.comboBoxCriterio.Location = new System.Drawing.Point(180, 390);
             this.comboBoxCriterio.Name = "comboBoxCriterio";
             this.comboBoxCriterio.Size = new System.Drawing.Size(109, 21);
-            this.comboBoxCriterio.TabIndex = 17;
+            this.comboBoxCriterio.TabIndex = 7;
             // 
             // labelCriterio
             // 
@@ -258,7 +278,7 @@
             this.textBoxFiltroAvanzado.Location = new System.Drawing.Point(304, 390);
             this.textBoxFiltroAvanzado.Name = "textBoxFiltroAvanzado";
             this.textBoxFiltroAvanzado.Size = new System.Drawing.Size(124, 20);
-            this.textBoxFiltroAvanzado.TabIndex = 19;
+            this.textBoxFiltroAvanzado.TabIndex = 8;
             this.textBoxFiltroAvanzado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxFiltroAvanzado_KeyDown);
             // 
             // btnBuscar
@@ -266,7 +286,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(445, 387);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(155, 23);
-            this.btnBuscar.TabIndex = 20;
+            this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Filtrar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -281,6 +301,18 @@
             this.labelFiltrado.TabIndex = 21;
             this.labelFiltrado.Text = "Filtrar productos";
             // 
+            // btnRestablecer
+            // 
+            this.btnRestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestablecer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnRestablecer.Location = new System.Drawing.Point(489, 87);
+            this.btnRestablecer.Name = "btnRestablecer";
+            this.btnRestablecer.Size = new System.Drawing.Size(84, 23);
+            this.btnRestablecer.TabIndex = 22;
+            this.btnRestablecer.Text = "Restablecer";
+            this.btnRestablecer.UseVisualStyleBackColor = true;
+            this.btnRestablecer.Click += new System.EventHandler(this.btnRestablecer_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +321,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 480);
             this.ControlBox = false;
+            this.Controls.Add(this.btnRestablecer);
             this.Controls.Add(this.labelFiltrado);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBoxFiltroAvanzado);
@@ -297,7 +330,7 @@
             this.Controls.Add(this.labelCriterio);
             this.Controls.Add(this.comboBoxCampo);
             this.Controls.Add(this.labelCampo);
-            this.Controls.Add(this.txtBoxFiltro);
+            this.Controls.Add(this.textBoxFiltro);
             this.Controls.Add(this.lblFiltro);
             this.Controls.Add(this.dataGridArticulos);
             this.Controls.Add(this.btnVerArticulo);
@@ -337,7 +370,7 @@
         private System.Windows.Forms.Button btnVerArticulo;
         private System.Windows.Forms.DataGridView dataGridArticulos;
         private System.Windows.Forms.Label lblFiltro;
-        private System.Windows.Forms.TextBox txtBoxFiltro;
+        private System.Windows.Forms.TextBox textBoxFiltro;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label labelCampo;
         private System.Windows.Forms.ComboBox comboBoxCampo;
@@ -347,5 +380,6 @@
         private System.Windows.Forms.TextBox textBoxFiltroAvanzado;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label labelFiltrado;
+        private System.Windows.Forms.Button btnRestablecer;
     }
 }
