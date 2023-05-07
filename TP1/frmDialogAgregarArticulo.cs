@@ -69,7 +69,7 @@ namespace TP1
             frmDialogAgregarArticulo.ActiveForm.Close();
         }
 
-        private void btnAgregarArticulo_Click(object sender, EventArgs e)
+        public void procesarArticulo()
         {
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             ImagenNegocio imagenNegocio = new ImagenNegocio();
@@ -89,8 +89,8 @@ namespace TP1
 
                     if (articulo.Id == 0)
                     {
-                    artNegocio.agregar(articulo);
-                    MessageBox.Show("Se agrego correctamente");
+                        artNegocio.agregar(articulo);
+                        MessageBox.Show("Se agrego correctamente");
                     }
                     else
                     {
@@ -126,6 +126,11 @@ namespace TP1
                 {
                     MessageBox.Show(ex.ToString());
                 }
+        }
+
+        private void btnAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            procesarArticulo();
         }
         private bool checkNullity()
         {
@@ -194,6 +199,11 @@ namespace TP1
         {
             if ((e.KeyChar < 48 || e.KeyChar > 59 || e.KeyChar == 46) && e.KeyChar != 8 && e.KeyChar != 44)
                 e.Handled = true;
+
+            if(e.KeyChar == 13)
+            {
+                procesarArticulo();
+            }
         }
 
         private void frmDialogAgregarArticulo_FormClosing(object sender, FormClosingEventArgs e)

@@ -50,7 +50,7 @@
             this.labelConfirmacionEliminar.Location = new System.Drawing.Point(42, 92);
             this.labelConfirmacionEliminar.Name = "labelConfirmacionEliminar";
             this.labelConfirmacionEliminar.Size = new System.Drawing.Size(418, 45);
-            this.labelConfirmacionEliminar.TabIndex = 6;
+            this.labelConfirmacionEliminar.TabIndex = 0;
             this.labelConfirmacionEliminar.Text = "¿Desea eliminar la categoría (NOMBRE_CAT)?";
             this.labelConfirmacionEliminar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -62,7 +62,7 @@
             this.btnEliminarCategoria.Location = new System.Drawing.Point(191, 151);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
             this.btnEliminarCategoria.Size = new System.Drawing.Size(269, 32);
-            this.btnEliminarCategoria.TabIndex = 21;
+            this.btnEliminarCategoria.TabIndex = 2;
             this.btnEliminarCategoria.Text = "ELIMINAR CATEGORÍA";
             this.btnEliminarCategoria.UseVisualStyleBackColor = false;
             this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
@@ -76,7 +76,7 @@
             this.btnVolver.Location = new System.Drawing.Point(42, 151);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(126, 32);
-            this.btnVolver.TabIndex = 22;
+            this.btnVolver.TabIndex = 1;
             this.btnVolver.Text = "VOLVER MARCA";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);

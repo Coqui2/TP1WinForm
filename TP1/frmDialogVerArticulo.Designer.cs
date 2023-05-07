@@ -78,7 +78,7 @@
             this.textBoxCodigoArt.Name = "textBoxCodigoArt";
             this.textBoxCodigoArt.ReadOnly = true;
             this.textBoxCodigoArt.Size = new System.Drawing.Size(119, 23);
-            this.textBoxCodigoArt.TabIndex = 5;
+            this.textBoxCodigoArt.TabIndex = 2;
             this.textBoxCodigoArt.Text = "(CODIGO)";
             // 
             // labelNombreArt
@@ -98,7 +98,7 @@
             this.textBoxNombreArt.Name = "textBoxNombreArt";
             this.textBoxNombreArt.ReadOnly = true;
             this.textBoxNombreArt.Size = new System.Drawing.Size(264, 23);
-            this.textBoxNombreArt.TabIndex = 7;
+            this.textBoxNombreArt.TabIndex = 3;
             this.textBoxNombreArt.Text = "(NOMBRE)";
             // 
             // labelDescripcionArt
@@ -119,7 +119,7 @@
             this.textBoxDescripcionArt.Name = "textBoxDescripcionArt";
             this.textBoxDescripcionArt.ReadOnly = true;
             this.textBoxDescripcionArt.Size = new System.Drawing.Size(425, 90);
-            this.textBoxDescripcionArt.TabIndex = 9;
+            this.textBoxDescripcionArt.TabIndex = 7;
             this.textBoxDescripcionArt.Text = "(DESCRIPCION)";
             // 
             // labelMarcaArt
@@ -150,7 +150,7 @@
             this.btnDuplicarArticulo.Location = new System.Drawing.Point(35, 532);
             this.btnDuplicarArticulo.Name = "btnDuplicarArticulo";
             this.btnDuplicarArticulo.Size = new System.Drawing.Size(201, 32);
-            this.btnDuplicarArticulo.TabIndex = 20;
+            this.btnDuplicarArticulo.TabIndex = 10;
             this.btnDuplicarArticulo.Text = "DUPLICAR";
             this.btnDuplicarArticulo.UseVisualStyleBackColor = false;
             // 
@@ -161,7 +161,7 @@
             this.labelPrecioArt.Location = new System.Drawing.Point(215, 209);
             this.labelPrecioArt.Name = "labelPrecioArt";
             this.labelPrecioArt.Size = new System.Drawing.Size(111, 29);
-            this.labelPrecioArt.TabIndex = 21;
+            this.labelPrecioArt.TabIndex = 4;
             this.labelPrecioArt.Text = "$111111";
             // 
             // btnVolver
@@ -172,7 +172,7 @@
             this.btnVolver.Location = new System.Drawing.Point(35, 586);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(126, 32);
-            this.btnVolver.TabIndex = 24;
+            this.btnVolver.TabIndex = 11;
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
@@ -184,7 +184,7 @@
             this.textBoxMarcaArt.Name = "textBoxMarcaArt";
             this.textBoxMarcaArt.ReadOnly = true;
             this.textBoxMarcaArt.Size = new System.Drawing.Size(425, 23);
-            this.textBoxMarcaArt.TabIndex = 26;
+            this.textBoxMarcaArt.TabIndex = 5;
             this.textBoxMarcaArt.Text = "(MARCA)";
             // 
             // textBoxCategoriaArt
@@ -194,7 +194,7 @@
             this.textBoxCategoriaArt.Name = "textBoxCategoriaArt";
             this.textBoxCategoriaArt.ReadOnly = true;
             this.textBoxCategoriaArt.Size = new System.Drawing.Size(425, 23);
-            this.textBoxCategoriaArt.TabIndex = 27;
+            this.textBoxCategoriaArt.TabIndex = 6;
             this.textBoxCategoriaArt.Text = "(CATEGORÍA)";
             // 
             // pictureBoxImagenes
@@ -213,7 +213,7 @@
             this.btnProxImagen.Location = new System.Drawing.Point(113, 255);
             this.btnProxImagen.Name = "btnProxImagen";
             this.btnProxImagen.Size = new System.Drawing.Size(25, 23);
-            this.btnProxImagen.TabIndex = 29;
+            this.btnProxImagen.TabIndex = 1;
             this.btnProxImagen.Text = ">";
             this.btnProxImagen.UseVisualStyleBackColor = true;
             this.btnProxImagen.Click += new System.EventHandler(this.btnProxImagen_Click);
@@ -225,7 +225,7 @@
             this.btnImagenAnterior.Location = new System.Drawing.Point(82, 255);
             this.btnImagenAnterior.Name = "btnImagenAnterior";
             this.btnImagenAnterior.Size = new System.Drawing.Size(25, 23);
-            this.btnImagenAnterior.TabIndex = 30;
+            this.btnImagenAnterior.TabIndex = 0;
             this.btnImagenAnterior.Text = "<";
             this.btnImagenAnterior.UseVisualStyleBackColor = true;
             this.btnImagenAnterior.Click += new System.EventHandler(this.btnImagenAnterior_Click);
@@ -238,7 +238,7 @@
             this.btnModificarArticulo.Location = new System.Drawing.Point(259, 532);
             this.btnModificarArticulo.Name = "btnModificarArticulo";
             this.btnModificarArticulo.Size = new System.Drawing.Size(201, 32);
-            this.btnModificarArticulo.TabIndex = 31;
+            this.btnModificarArticulo.TabIndex = 8;
             this.btnModificarArticulo.Text = "MODIFICAR";
             this.btnModificarArticulo.UseVisualStyleBackColor = false;
             this.btnModificarArticulo.Click += new System.EventHandler(this.btnModificarArticulo_Click);
@@ -251,7 +251,7 @@
             this.btnEliminarArticulo.Location = new System.Drawing.Point(191, 586);
             this.btnEliminarArticulo.Name = "btnEliminarArticulo";
             this.btnEliminarArticulo.Size = new System.Drawing.Size(269, 32);
-            this.btnEliminarArticulo.TabIndex = 32;
+            this.btnEliminarArticulo.TabIndex = 9;
             this.btnEliminarArticulo.Text = "ELIMINAR ARTÍCULO";
             this.btnEliminarArticulo.UseVisualStyleBackColor = false;
             this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click_1);

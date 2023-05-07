@@ -61,7 +61,7 @@
             this.textBoxNombreMarca.Location = new System.Drawing.Point(42, 111);
             this.textBoxNombreMarca.Name = "textBoxNombreMarca";
             this.textBoxNombreMarca.Size = new System.Drawing.Size(418, 23);
-            this.textBoxNombreMarca.TabIndex = 7;
+            this.textBoxNombreMarca.TabIndex = 0;
             this.textBoxNombreMarca.Text = "NOMBRE_MARCA";
             this.textBoxNombreMarca.KeyDown += new System.Windows.Forms.KeyEventHandler(this.onTxtBoxKeyDown);
             // 
@@ -73,7 +73,7 @@
             this.btnModificarMarca.Location = new System.Drawing.Point(191, 151);
             this.btnModificarMarca.Name = "btnModificarMarca";
             this.btnModificarMarca.Size = new System.Drawing.Size(269, 32);
-            this.btnModificarMarca.TabIndex = 21;
+            this.btnModificarMarca.TabIndex = 2;
             this.btnModificarMarca.Text = "MODIFICAR MARCA";
             this.btnModificarMarca.UseVisualStyleBackColor = false;
             this.btnModificarMarca.Click += new System.EventHandler(this.btnModificarMarca_Click);
@@ -86,7 +86,7 @@
             this.btnVolver.Location = new System.Drawing.Point(42, 151);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(126, 32);
-            this.btnVolver.TabIndex = 22;
+            this.btnVolver.TabIndex = 1;
             this.btnVolver.Text = "VOLVER MARCA";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);

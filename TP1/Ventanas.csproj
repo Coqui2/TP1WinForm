@@ -52,12 +52,6 @@
     <Compile Include="frmContenedor.Designer.cs">
       <DependentUpon>frmContenedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBuscarArticulo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBuscarArticulo.Designer.cs">
-      <DependentUpon>frmBuscarArticulo.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDialogEliminarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,12 +88,6 @@
     <Compile Include="frmDialogEditarMarca.Designer.cs">
       <DependentUpon>frmDialogEditarMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDialogEditarArticulo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDialogEditarArticulo.Designer.cs">
-      <DependentUpon>frmDialogEditarArticulo.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDialogAgregarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,30 +105,6 @@
     </Compile>
     <Compile Include="frmDialogAgregarArticulo.Designer.cs">
       <DependentUpon>frmDialogAgregarArticulo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBuscarCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBuscarCategoria.Designer.cs">
-      <DependentUpon>frmBuscarCategoria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBuscarMarca.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBuscarMarca.Designer.cs">
-      <DependentUpon>frmBuscarMarca.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBuscarArticuloNombre.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBuscarArticuloNombre.Designer.cs">
-      <DependentUpon>frmBuscarArticuloNombre.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBuscarArticuloCod.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBuscarArticuloCod.Designer.cs">
-      <DependentUpon>frmBuscarArticuloCod.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListadoCategorias.cs">
       <SubType>Form</SubType>
@@ -165,9 +129,6 @@
     <EmbeddedResource Include="frmContenedor.resx">
       <DependentUpon>frmContenedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscarArticulo.resx">
-      <DependentUpon>frmBuscarArticulo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmDialogEliminarArticulo.resx">
       <DependentUpon>frmDialogEliminarArticulo.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,9 +147,6 @@
     <EmbeddedResource Include="frmDialogEditarMarca.resx">
       <DependentUpon>frmDialogEditarMarca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDialogEditarArticulo.resx">
-      <DependentUpon>frmDialogEditarArticulo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmDialogAgregarCategoria.resx">
       <DependentUpon>frmDialogAgregarCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,18 +155,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDialogAgregarArticulo.resx">
       <DependentUpon>frmDialogAgregarArticulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscarCategoria.resx">
-      <DependentUpon>frmBuscarCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscarMarca.resx">
-      <DependentUpon>frmBuscarMarca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscarArticuloNombre.resx">
-      <DependentUpon>frmBuscarArticuloNombre.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscarArticuloCod.resx">
-      <DependentUpon>frmBuscarArticuloCod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListadoCategorias.resx">
       <DependentUpon>frmListadoCategorias.cs</DependentUpon>

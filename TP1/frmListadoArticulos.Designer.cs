@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelListadoArticulos = new System.Windows.Forms.Label();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
@@ -100,7 +100,7 @@
             this.btnAgregarArticulo.Location = new System.Drawing.Point(51, 283);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
             this.btnAgregarArticulo.Size = new System.Drawing.Size(123, 23);
-            this.btnAgregarArticulo.TabIndex = 3;
+            this.btnAgregarArticulo.TabIndex = 6;
             this.btnAgregarArticulo.Text = "Agregar artículo";
             this.btnAgregarArticulo.UseVisualStyleBackColor = false;
             this.btnAgregarArticulo.Click += new System.EventHandler(this.btnAgregarArticulo_Click);
@@ -132,7 +132,7 @@
             this.labelCodigoArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodigoArticulo.Location = new System.Drawing.Point(622, 86);
             this.labelCodigoArticulo.Name = "labelCodigoArticulo";
-            this.labelCodigoArticulo.Size = new System.Drawing.Size(105, 24);
+            this.labelCodigoArticulo.Size = new System.Drawing.Size(141, 24);
             this.labelCodigoArticulo.TabIndex = 8;
             this.labelCodigoArticulo.Text = "Cod. #1111";
             // 
@@ -164,7 +164,7 @@
             this.btnVerArticulo.Location = new System.Drawing.Point(627, 318);
             this.btnVerArticulo.Name = "btnVerArticulo";
             this.btnVerArticulo.Size = new System.Drawing.Size(123, 23);
-            this.btnVerArticulo.TabIndex = 2;
+            this.btnVerArticulo.TabIndex = 3;
             this.btnVerArticulo.Text = "Ver detalles";
             this.btnVerArticulo.UseVisualStyleBackColor = false;
             this.btnVerArticulo.Click += new System.EventHandler(this.btnVerArticulo_Click);
@@ -181,14 +181,14 @@
             this.dataGridArticulos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridArticulos.GridColor = System.Drawing.SystemColors.Control;
@@ -200,7 +200,7 @@
             this.dataGridArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridArticulos.Size = new System.Drawing.Size(549, 146);
             this.dataGridArticulos.StandardTab = true;
-            this.dataGridArticulos.TabIndex = 1;
+            this.dataGridArticulos.TabIndex = 2;
             this.dataGridArticulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridArticulos_CellDoubleClick);
             this.dataGridArticulos.SelectionChanged += new System.EventHandler(this.dataGridArticulos_SelectionChanged);
             // 
@@ -230,7 +230,7 @@
             // labelCampo
             // 
             this.labelCampo.AutoSize = true;
-            this.labelCampo.Location = new System.Drawing.Point(54, 358);
+            this.labelCampo.Location = new System.Drawing.Point(51, 355);
             this.labelCampo.Name = "labelCampo";
             this.labelCampo.Size = new System.Drawing.Size(40, 13);
             this.labelCampo.TabIndex = 14;
@@ -240,25 +240,25 @@
             // 
             this.comboBoxCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCampo.FormattingEnabled = true;
-            this.comboBoxCampo.Location = new System.Drawing.Point(57, 374);
+            this.comboBoxCampo.Location = new System.Drawing.Point(54, 371);
             this.comboBoxCampo.Name = "comboBoxCampo";
             this.comboBoxCampo.Size = new System.Drawing.Size(104, 21);
-            this.comboBoxCampo.TabIndex = 6;
+            this.comboBoxCampo.TabIndex = 7;
             this.comboBoxCampo.SelectedIndexChanged += new System.EventHandler(this.comboBoxCampo_SelectedIndexChanged);
             // 
             // comboBoxCriterio
             // 
             this.comboBoxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCriterio.FormattingEnabled = true;
-            this.comboBoxCriterio.Location = new System.Drawing.Point(183, 374);
+            this.comboBoxCriterio.Location = new System.Drawing.Point(180, 371);
             this.comboBoxCriterio.Name = "comboBoxCriterio";
             this.comboBoxCriterio.Size = new System.Drawing.Size(109, 21);
-            this.comboBoxCriterio.TabIndex = 7;
+            this.comboBoxCriterio.TabIndex = 8;
             // 
             // labelCriterio
             // 
             this.labelCriterio.AutoSize = true;
-            this.labelCriterio.Location = new System.Drawing.Point(180, 358);
+            this.labelCriterio.Location = new System.Drawing.Point(177, 355);
             this.labelCriterio.Name = "labelCriterio";
             this.labelCriterio.Size = new System.Drawing.Size(39, 13);
             this.labelCriterio.TabIndex = 16;
@@ -267,7 +267,7 @@
             // labelFiltroAvanzado
             // 
             this.labelFiltroAvanzado.AutoSize = true;
-            this.labelFiltroAvanzado.Location = new System.Drawing.Point(304, 358);
+            this.labelFiltroAvanzado.Location = new System.Drawing.Point(301, 355);
             this.labelFiltroAvanzado.Name = "labelFiltroAvanzado";
             this.labelFiltroAvanzado.Size = new System.Drawing.Size(45, 13);
             this.labelFiltroAvanzado.TabIndex = 18;
@@ -275,18 +275,18 @@
             // 
             // textBoxFiltroAvanzado
             // 
-            this.textBoxFiltroAvanzado.Location = new System.Drawing.Point(307, 374);
+            this.textBoxFiltroAvanzado.Location = new System.Drawing.Point(304, 371);
             this.textBoxFiltroAvanzado.Name = "textBoxFiltroAvanzado";
             this.textBoxFiltroAvanzado.Size = new System.Drawing.Size(124, 20);
-            this.textBoxFiltroAvanzado.TabIndex = 8;
+            this.textBoxFiltroAvanzado.TabIndex = 9;
             this.textBoxFiltroAvanzado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxFiltroAvanzado_KeyDown);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(448, 371);
+            this.btnBuscar.Location = new System.Drawing.Point(445, 368);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(155, 23);
-            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Filtrar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -295,7 +295,7 @@
             // 
             this.labelFiltrado.AutoSize = true;
             this.labelFiltrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFiltrado.Location = new System.Drawing.Point(50, 322);
+            this.labelFiltrado.Location = new System.Drawing.Point(47, 319);
             this.labelFiltrado.Name = "labelFiltrado";
             this.labelFiltrado.Size = new System.Drawing.Size(145, 24);
             this.labelFiltrado.TabIndex = 21;
@@ -308,7 +308,7 @@
             this.btnRestablecer.Location = new System.Drawing.Point(489, 87);
             this.btnRestablecer.Name = "btnRestablecer";
             this.btnRestablecer.Size = new System.Drawing.Size(84, 23);
-            this.btnRestablecer.TabIndex = 22;
+            this.btnRestablecer.TabIndex = 1;
             this.btnRestablecer.Text = "Restablecer";
             this.btnRestablecer.UseVisualStyleBackColor = true;
             this.btnRestablecer.Click += new System.EventHandler(this.btnRestablecer_Click);

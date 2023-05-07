@@ -50,7 +50,7 @@
             this.labelConfirmacionEliminar.Location = new System.Drawing.Point(42, 92);
             this.labelConfirmacionEliminar.Name = "labelConfirmacionEliminar";
             this.labelConfirmacionEliminar.Size = new System.Drawing.Size(418, 43);
-            this.labelConfirmacionEliminar.TabIndex = 6;
+            this.labelConfirmacionEliminar.TabIndex = 0;
             this.labelConfirmacionEliminar.Text = "¿Desea eliminar la marca (NOMBRE_MARCA?";
             this.labelConfirmacionEliminar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -62,7 +62,7 @@
             this.btnEliminarMarca.Location = new System.Drawing.Point(191, 151);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(269, 32);
-            this.btnEliminarMarca.TabIndex = 21;
+            this.btnEliminarMarca.TabIndex = 2;
             this.btnEliminarMarca.Text = "ELIMINAR MARCA";
             this.btnEliminarMarca.UseVisualStyleBackColor = false;
             this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
@@ -76,7 +76,7 @@
             this.btnVolver.Location = new System.Drawing.Point(42, 151);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(126, 32);
-            this.btnVolver.TabIndex = 22;
+            this.btnVolver.TabIndex = 1;
             this.btnVolver.Text = "VOLVER MARCA";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);

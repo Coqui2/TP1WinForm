@@ -61,7 +61,7 @@
             this.textBoxNombreCategoria.Location = new System.Drawing.Point(43, 112);
             this.textBoxNombreCategoria.Name = "textBoxNombreCategoria";
             this.textBoxNombreCategoria.Size = new System.Drawing.Size(395, 23);
-            this.textBoxNombreCategoria.TabIndex = 7;
+            this.textBoxNombreCategoria.TabIndex = 0;
             this.textBoxNombreCategoria.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxNombreCategoria_KeyDown);
             // 
             // btnAgregarCategoria
@@ -72,7 +72,7 @@
             this.btnAgregarCategoria.Location = new System.Drawing.Point(188, 157);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(250, 32);
-            this.btnAgregarCategoria.TabIndex = 20;
+            this.btnAgregarCategoria.TabIndex = 2;
             this.btnAgregarCategoria.Text = "AGREGAR CATEGORÍA";
             this.btnAgregarCategoria.UseVisualStyleBackColor = false;
             this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
@@ -85,7 +85,7 @@
             this.btnVolver.Location = new System.Drawing.Point(43, 157);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(126, 32);
-            this.btnVolver.TabIndex = 25;
+            this.btnVolver.TabIndex = 1;
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);

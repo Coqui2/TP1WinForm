@@ -61,7 +61,7 @@
             this.textBoxNombreCategoria.Location = new System.Drawing.Point(42, 111);
             this.textBoxNombreCategoria.Name = "textBoxNombreCategoria";
             this.textBoxNombreCategoria.Size = new System.Drawing.Size(418, 23);
-            this.textBoxNombreCategoria.TabIndex = 7;
+            this.textBoxNombreCategoria.TabIndex = 0;
             this.textBoxNombreCategoria.Text = "NOMBRE_CATEGORIA";
             this.textBoxNombreCategoria.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxNombreCategoria_KeyDown);
             // 
@@ -73,7 +73,7 @@
             this.btnModificarCategoria.Location = new System.Drawing.Point(191, 151);
             this.btnModificarCategoria.Name = "btnModificarCategoria";
             this.btnModificarCategoria.Size = new System.Drawing.Size(269, 32);
-            this.btnModificarCategoria.TabIndex = 21;
+            this.btnModificarCategoria.TabIndex = 2;
             this.btnModificarCategoria.Text = "MODIFICAR CATEGORÍA";
             this.btnModificarCategoria.UseVisualStyleBackColor = false;
             this.btnModificarCategoria.Click += new System.EventHandler(this.btnModificarCategoria_Click);
@@ -86,7 +86,7 @@
             this.btnVolver.Location = new System.Drawing.Point(42, 151);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(126, 32);
-            this.btnVolver.TabIndex = 22;
+            this.btnVolver.TabIndex = 1;
             this.btnVolver.Text = "VOLVER CATEGORIA";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);

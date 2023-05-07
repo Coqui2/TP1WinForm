@@ -75,7 +75,7 @@
             this.textBoxCodigoArt.Location = new System.Drawing.Point(35, 111);
             this.textBoxCodigoArt.Name = "textBoxCodigoArt";
             this.textBoxCodigoArt.Size = new System.Drawing.Size(133, 23);
-            this.textBoxCodigoArt.TabIndex = 5;
+            this.textBoxCodigoArt.TabIndex = 0;
             this.textBoxCodigoArt.Leave += new System.EventHandler(this.textBoxCodigoArt_Leave);
             // 
             // labelNombreArt
@@ -94,7 +94,7 @@
             this.textBoxNombreArt.Location = new System.Drawing.Point(196, 111);
             this.textBoxNombreArt.Name = "textBoxNombreArt";
             this.textBoxNombreArt.Size = new System.Drawing.Size(264, 23);
-            this.textBoxNombreArt.TabIndex = 7;
+            this.textBoxNombreArt.TabIndex = 1;
             this.textBoxNombreArt.Leave += new System.EventHandler(this.textBoxNombreArt_Leave);
             // 
             // labelDescripcionArt
@@ -114,7 +114,7 @@
             this.textBoxDescripcionArt.Multiline = true;
             this.textBoxDescripcionArt.Name = "textBoxDescripcionArt";
             this.textBoxDescripcionArt.Size = new System.Drawing.Size(425, 71);
-            this.textBoxDescripcionArt.TabIndex = 9;
+            this.textBoxDescripcionArt.TabIndex = 2;
             // 
             // labelMarcaArt
             // 
@@ -134,7 +134,7 @@
             this.comboBoxMarcasArt.Location = new System.Drawing.Point(35, 289);
             this.comboBoxMarcasArt.Name = "comboBoxMarcasArt";
             this.comboBoxMarcasArt.Size = new System.Drawing.Size(425, 24);
-            this.comboBoxMarcasArt.TabIndex = 11;
+            this.comboBoxMarcasArt.TabIndex = 3;
             this.comboBoxMarcasArt.Leave += new System.EventHandler(this.comboBoxMarcasArt_Leave);
             // 
             // comboBoxCategoriaArt
@@ -145,7 +145,7 @@
             this.comboBoxCategoriaArt.Location = new System.Drawing.Point(35, 354);
             this.comboBoxCategoriaArt.Name = "comboBoxCategoriaArt";
             this.comboBoxCategoriaArt.Size = new System.Drawing.Size(425, 24);
-            this.comboBoxCategoriaArt.TabIndex = 13;
+            this.comboBoxCategoriaArt.TabIndex = 4;
             this.comboBoxCategoriaArt.Leave += new System.EventHandler(this.comboBoxCategoriaArt_Leave);
             // 
             // labelCategoriaArt
@@ -185,7 +185,7 @@
             this.textBoxUrlImagenesArt.Multiline = true;
             this.textBoxUrlImagenesArt.Name = "textBoxUrlImagenesArt";
             this.textBoxUrlImagenesArt.Size = new System.Drawing.Size(425, 71);
-            this.textBoxUrlImagenesArt.TabIndex = 17;
+            this.textBoxUrlImagenesArt.TabIndex = 5;
             // 
             // labelPrecioArt
             // 
@@ -203,7 +203,7 @@
             this.textBoxPrecioArt.Location = new System.Drawing.Point(249, 520);
             this.textBoxPrecioArt.Name = "textBoxPrecioArt";
             this.textBoxPrecioArt.Size = new System.Drawing.Size(103, 32);
-            this.textBoxPrecioArt.TabIndex = 19;
+            this.textBoxPrecioArt.TabIndex = 6;
             this.textBoxPrecioArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioArt_KeyPress);
             // 
             // btnAgregarArticulo
@@ -214,7 +214,7 @@
             this.btnAgregarArticulo.Location = new System.Drawing.Point(191, 586);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
             this.btnAgregarArticulo.Size = new System.Drawing.Size(269, 32);
-            this.btnAgregarArticulo.TabIndex = 20;
+            this.btnAgregarArticulo.TabIndex = 7;
             this.btnAgregarArticulo.Text = "ACEPTAR";
             this.btnAgregarArticulo.UseVisualStyleBackColor = false;
             this.btnAgregarArticulo.Click += new System.EventHandler(this.btnAgregarArticulo_Click);
@@ -237,7 +237,7 @@
             this.btnVolver.Location = new System.Drawing.Point(35, 586);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(126, 32);
-            this.btnVolver.TabIndex = 24;
+            this.btnVolver.TabIndex = 8;
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
