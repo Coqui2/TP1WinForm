@@ -37,7 +37,7 @@
             this.textBoxDescripcionArt = new System.Windows.Forms.TextBox();
             this.labelMarcaArt = new System.Windows.Forms.Label();
             this.labelCategoriaArt = new System.Windows.Forms.Label();
-            this.btnBuscarArtCodigo = new System.Windows.Forms.Button();
+            this.btnDuplicarArticulo = new System.Windows.Forms.Button();
             this.labelPrecioArt = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.textBoxMarcaArt = new System.Windows.Forms.TextBox();
@@ -46,7 +46,7 @@
             this.btnProxImagen = new System.Windows.Forms.Button();
             this.btnImagenAnterior = new System.Windows.Forms.Button();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
-            this.btnModificarCategoria = new System.Windows.Forms.Button();
+            this.btnEliminarArticulo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,17 +141,17 @@
             this.labelCategoriaArt.TabIndex = 12;
             this.labelCategoriaArt.Text = "Categoría:";
             // 
-            // btnBuscarArtCodigo
+            // btnDuplicarArticulo
             // 
-            this.btnBuscarArtCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarArtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btnBuscarArtCodigo.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btnBuscarArtCodigo.Location = new System.Drawing.Point(35, 532);
-            this.btnBuscarArtCodigo.Name = "btnBuscarArtCodigo";
-            this.btnBuscarArtCodigo.Size = new System.Drawing.Size(201, 32);
-            this.btnBuscarArtCodigo.TabIndex = 20;
-            this.btnBuscarArtCodigo.Text = "DUPLICAR";
-            this.btnBuscarArtCodigo.UseVisualStyleBackColor = false;
+            this.btnDuplicarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuplicarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnDuplicarArticulo.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btnDuplicarArticulo.Location = new System.Drawing.Point(35, 532);
+            this.btnDuplicarArticulo.Name = "btnDuplicarArticulo";
+            this.btnDuplicarArticulo.Size = new System.Drawing.Size(201, 32);
+            this.btnDuplicarArticulo.TabIndex = 20;
+            this.btnDuplicarArticulo.Text = "DUPLICAR";
+            this.btnDuplicarArticulo.UseVisualStyleBackColor = false;
             // 
             // labelPrecioArt
             // 
@@ -240,25 +240,27 @@
             this.btnModificarArticulo.TabIndex = 31;
             this.btnModificarArticulo.Text = "MODIFICAR";
             this.btnModificarArticulo.UseVisualStyleBackColor = false;
+            this.btnModificarArticulo.Click += new System.EventHandler(this.btnModificarArticulo_Click);
             // 
-            // btnModificarCategoria
+            // btnEliminarArticulo
             // 
-            this.btnModificarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btnModificarCategoria.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnModificarCategoria.Location = new System.Drawing.Point(191, 586);
-            this.btnModificarCategoria.Name = "btnModificarCategoria";
-            this.btnModificarCategoria.Size = new System.Drawing.Size(269, 32);
-            this.btnModificarCategoria.TabIndex = 32;
-            this.btnModificarCategoria.Text = "ELIMINAR ARTÍCULO";
-            this.btnModificarCategoria.UseVisualStyleBackColor = false;
+            this.btnEliminarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnEliminarArticulo.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnEliminarArticulo.Location = new System.Drawing.Point(191, 586);
+            this.btnEliminarArticulo.Name = "btnEliminarArticulo";
+            this.btnEliminarArticulo.Size = new System.Drawing.Size(269, 32);
+            this.btnEliminarArticulo.TabIndex = 32;
+            this.btnEliminarArticulo.Text = "ELIMINAR ARTÍCULO";
+            this.btnEliminarArticulo.UseVisualStyleBackColor = false;
+            this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click_1);
             // 
             // frmDialogVerArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 650);
-            this.Controls.Add(this.btnModificarCategoria);
+            this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.btnModificarArticulo);
             this.Controls.Add(this.btnImagenAnterior);
             this.Controls.Add(this.btnProxImagen);
@@ -267,7 +269,7 @@
             this.Controls.Add(this.textBoxMarcaArt);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.labelPrecioArt);
-            this.Controls.Add(this.btnBuscarArtCodigo);
+            this.Controls.Add(this.btnDuplicarArticulo);
             this.Controls.Add(this.labelCategoriaArt);
             this.Controls.Add(this.labelMarcaArt);
             this.Controls.Add(this.textBoxDescripcionArt);
@@ -281,6 +283,7 @@
             this.Name = "frmDialogVerArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Detalles (NOMBRE_ART)";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDialogVerArticulo_FormClosed);
             this.Load += new System.EventHandler(this.frmDialogVerArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenes)).EndInit();
             this.ResumeLayout(false);
@@ -299,7 +302,7 @@
         private System.Windows.Forms.TextBox textBoxDescripcionArt;
         private System.Windows.Forms.Label labelMarcaArt;
         private System.Windows.Forms.Label labelCategoriaArt;
-        private System.Windows.Forms.Button btnBuscarArtCodigo;
+        private System.Windows.Forms.Button btnDuplicarArticulo;
         private System.Windows.Forms.Label labelPrecioArt;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.TextBox textBoxMarcaArt;
@@ -308,6 +311,6 @@
         private System.Windows.Forms.Button btnProxImagen;
         private System.Windows.Forms.Button btnImagenAnterior;
         private System.Windows.Forms.Button btnModificarArticulo;
-        private System.Windows.Forms.Button btnModificarCategoria;
+        private System.Windows.Forms.Button btnEliminarArticulo;
     }
 }

@@ -43,11 +43,23 @@ namespace TP1
                 textBoxMarcaArt.Text = articulo.Marca.Nombre;
                 textBoxCategoriaArt.Text = articulo.Categoria.Nombre;
                 textBoxDescripcionArt.Text = articulo.Descripcion;
-                pictureBoxImagenes.Load(imagenes[indiceImagenActual].url);
+                try
+                {
+                    pictureBoxImagenes.Load(imagenes[indiceImagenActual].url);
+                }
+                catch (Exception)
+                {
+                    pictureBoxImagenes.Load("https://previews.123rf.com/images/freshwater/freshwater1711/freshwater171100021/89104479-p%C3%ADxel-404-p%C3%A1gina-de-error-p%C3%A1gina-no-encontrada.jpg");
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            if(imagenes.Count() == 0)
+            {
+                btnImagenAnterior.Enabled = false;
+                btnProxImagen.Enabled = false;
             }
         }
 
@@ -62,9 +74,10 @@ namespace TP1
             {
                 pictureBoxImagenes.Load(imagenes[indiceImagenActual].url);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.ToString());
+                //MessageBox.Show(ex.ToString());
+                pictureBoxImagenes.Load("https://previews.123rf.com/images/freshwater/freshwater1711/freshwater171100021/89104479-p%C3%ADxel-404-p%C3%A1gina-de-error-p%C3%A1gina-no-encontrada.jpg");
             }
         }
 
@@ -79,10 +92,33 @@ namespace TP1
             {
                 pictureBoxImagenes.Load(imagenes[indiceImagenActual].url);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                pictureBoxImagenes.Load("https://previews.123rf.com/images/freshwater/freshwater1711/freshwater171100021/89104479-p%C3%ADxel-404-p%C3%A1gina-de-error-p%C3%A1gina-no-encontrada.jpg");
             }
+        }
+
+        private void btnModificarArticulo_Click(object sender, EventArgs e)
+        {
+            frmDialogAgregarArticulo form = new frmDialogAgregarArticulo(articulo);
+            form.Owner = this;
+            form.ShowDialog();
+        }
+
+        private void frmDialogVerArticulo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(this.Owner != null)
+            {
+                ((Form2)this.Owner).reload();
+            }
+        }
+
+        private void btnEliminarArticulo_Click_1(object sender, EventArgs e)
+        {
+            frmDialogEliminarArticulo form = new frmDialogEliminarArticulo(articulo);
+            form.Owner = this;
+            form.ShowDialog();
         }
     }
 }

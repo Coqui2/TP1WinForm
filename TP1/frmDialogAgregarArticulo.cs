@@ -193,7 +193,7 @@ namespace TP1
 
         private void frmDialogAgregarArticulo_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //actualizar listado articulos
+            ((Form2)this.Owner).reload();
         }
     }
 }

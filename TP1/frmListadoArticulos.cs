@@ -79,6 +79,10 @@ namespace TP1
             List<Imagen> imagenes = imagenNegocio.listarPorIdArticulo(seleccionado.Id);
             try
             {
+                labelCodigoArticulo.Text = $"Código  {seleccionado.Codigo}";
+                labelNombreArticulo.Text = seleccionado.Nombre;
+                labelCategoria.Text = seleccionado.Categoria.Nombre;
+                labelPrecioArticulo.Text = $"${seleccionado.Precio}";
                 if (imagenes != null)
                 {
                     pbxArticulo.Load(imagenes[0].url);
@@ -86,15 +90,11 @@ namespace TP1
                 {
                     pbxArticulo.Load("https://previews.123rf.com/images/freshwater/freshwater1711/freshwater171100021/89104479-p%C3%ADxel-404-p%C3%A1gina-de-error-p%C3%A1gina-no-encontrada.jpg");
                 }
-                labelCodigoArticulo.Text = $"Cod. #{seleccionado.Codigo}";
-                labelNombreArticulo.Text = seleccionado.Nombre;
-                labelCategoria.Text = seleccionado.Categoria.Nombre;
-                labelPrecioArticulo.Text = $"${seleccionado.Precio}";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 pbxArticulo.Load("https://previews.123rf.com/images/freshwater/freshwater1711/freshwater171100021/89104479-p%C3%ADxel-404-p%C3%A1gina-de-error-p%C3%A1gina-no-encontrada.jpg");
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
 
@@ -113,24 +113,28 @@ namespace TP1
         private void btnAgregarArticulo_Click(object sender, EventArgs e)
         {
             frmDialogAgregarArticulo form = new frmDialogAgregarArticulo();
+            form.Owner = this;
             form.ShowDialog();
         }
 
         private void btnVerArticulo_Click(object sender, EventArgs e)
         {
             frmDialogVerArticulo form = new frmDialogVerArticulo(getArticuloActivo());
+            form.Owner = this;
             form.ShowDialog();
         }
 
         private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
             frmDialogAgregarArticulo form = new frmDialogAgregarArticulo(getArticuloActivo());
+            form.Owner = this;
             form.ShowDialog();
         }
 
         private void btnEliminarArticulo_Click(object sender, EventArgs e)
         {
             frmDialogEliminarArticulo form = new frmDialogEliminarArticulo(getArticuloActivo());
+            form.Owner = this;
             form.ShowDialog();
         }
 
@@ -221,6 +225,7 @@ namespace TP1
         private void dataGridArticulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             frmDialogVerArticulo form = new frmDialogVerArticulo(getArticuloActivo());
+            form.Owner = this;
             form.ShowDialog();
         }
 

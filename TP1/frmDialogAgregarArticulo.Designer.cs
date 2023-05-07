@@ -128,6 +128,7 @@
             // 
             // comboBoxMarcasArt
             // 
+            this.comboBoxMarcasArt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMarcasArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBoxMarcasArt.FormattingEnabled = true;
             this.comboBoxMarcasArt.Location = new System.Drawing.Point(35, 289);
@@ -138,6 +139,7 @@
             // 
             // comboBoxCategoriaArt
             // 
+            this.comboBoxCategoriaArt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategoriaArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBoxCategoriaArt.FormattingEnabled = true;
             this.comboBoxCategoriaArt.Location = new System.Drawing.Point(35, 354);

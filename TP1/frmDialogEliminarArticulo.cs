@@ -18,6 +18,7 @@ namespace TP1
         public frmDialogEliminarArticulo(Articulo aux)
         {
             InitializeComponent();
+            this.Text = "Eliminar " + aux.Nombre;
             labelConfirmacionEliminar.Text = "¿Desea eliminar el artículo " + aux.Nombre + "?";
             artSeleccionado = aux;
         }
@@ -42,6 +43,14 @@ namespace TP1
             }
             MessageBox.Show("Articulo eliminado con exito");
             this.Close();
+        }
+
+        private void frmDialogEliminarArticulo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (this.Owner != null)
+            {
+                ((Form2)this.Owner).reload();
+            }
         }
     }
 }

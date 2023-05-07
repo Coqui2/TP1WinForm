@@ -93,6 +93,7 @@
             this.Name = "frmDialogEliminarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Eliminar (NOMBRE_ART)";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDialogEliminarArticulo_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
