@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using Modelo;
 using Controlador;
 using System.Data.SqlTypes;
+using System.Diagnostics.Eventing.Reader;
+using System.Text.RegularExpressions;
 
 namespace TP1
 {
@@ -31,7 +33,6 @@ namespace TP1
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -48,6 +49,13 @@ namespace TP1
             this.AutoSize = false;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             cargarLista();
+            //Filtro avanzado
+            comboBoxCampo.Items.Add("Código");
+            comboBoxCampo.Items.Add("Nombre");
+            comboBoxCampo.Items.Add("Descripción");
+            comboBoxCampo.Items.Add("Categoría");
+            comboBoxCampo.Items.Add("Marca");
+            comboBoxCampo.Items.Add("Precio");
         }
 
         void cargarPreview(Articulo seleccionado)
@@ -115,7 +123,86 @@ namespace TP1
             cargarLista();
         }
 
-        private void dataGridArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void comboBoxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string op = comboBoxCampo.SelectedItem.ToString();
+            if (op == "Precio")
+            {
+                comboBoxCriterio.Items.Clear();
+                comboBoxCriterio.Items.Add("Mayor que");
+                comboBoxCriterio.Items.Add("Menor que");
+                comboBoxCriterio.Items.Add("Igual a");
+            }
+            else
+            {
+                comboBoxCriterio.Items.Clear();
+                comboBoxCriterio.Items.Add("Empieza con");
+                comboBoxCriterio.Items.Add("Termina con");
+                comboBoxCriterio.Items.Add("Contiene");
+            }
+            
+        }
+        public void busquedaFiltroAvanzado()
+        {
+            if (comboBoxCampo.SelectedItem is null)
+            {
+                MessageBox.Show("Selecciona un campo.");
+                return;
+            }
+            if (comboBoxCriterio.SelectedItem is null)
+            {
+                MessageBox.Show("Selecciona un criterio.");
+                return;
+            }
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                string campo = comboBoxCampo.SelectedItem.ToString();
+                string criterio = comboBoxCriterio.SelectedItem.ToString();
+                string filtro = textBoxFiltroAvanzado.Text;
+                if (campo == "Precio")
+                {
+                    if (filtro == "")
+                    {
+                        MessageBox.Show("Ingresa un valor.");
+                        return;
+                    }
+                    if (!(filtro.All(char.IsNumber)))
+                    {
+                        MessageBox.Show("Ingresa un valor númerico");
+                        return;
+                    }
+                }
+
+                dataGridArticulos.DataSource = negocio.filtrar(campo, criterio, filtro);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            busquedaFiltroAvanzado();
+       
+        }
+
+        private void textBoxFiltroAvanzado_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                busquedaFiltroAvanzado();
+                return;
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                comboBoxCampo.Focus();
+                return;
+            }
+        }
+
+        private void dataGridArticulos_SelectionChanged(object sender, EventArgs e)
         {
             cargarPreview(getArticuloActivo());
         }

@@ -55,9 +55,9 @@ namespace Controlador
 
         public void eliminar(int id)
         {
+            AccesoDatos datos = new AccesoDatos();
             try
             {
-                AccesoDatos datos = new AccesoDatos();
                 datos.SetConsulta("delete from marcas where Id = @id");
                 datos.setearParametro("@id", id);
                 datos.EjecutarAccion();
@@ -65,6 +65,10 @@ namespace Controlador
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
             }
         }
 
@@ -81,6 +85,10 @@ namespace Controlador
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
             }
         }
     }

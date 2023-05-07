@@ -53,9 +53,9 @@ namespace Controlador
         }
         public void eliminar(int id)
         {
+            AccesoDatos datos = new AccesoDatos();
             try
             {
-                AccesoDatos datos = new AccesoDatos();
                 datos.SetConsulta("delete from categorias where Id = @id");
                 datos.setearParametro("@id", id);
                 datos.EjecutarAccion();
@@ -63,6 +63,10 @@ namespace Controlador
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
             }
         }
         public void modificar(Categoria modificar)
@@ -79,6 +83,10 @@ namespace Controlador
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
             }
         }
     }

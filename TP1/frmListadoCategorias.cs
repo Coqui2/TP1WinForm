@@ -19,10 +19,29 @@ namespace TP1
         private List<Categoria> categorias;
         private List<Categoria> lista;
 
+        private List<Articulo> listaArticulos;
+
         private void cargarLista()
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
             categorias = negocio.listar();
+        }
+
+        private void cargarListaArticulos()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                listaArticulos = negocio.listar(getCategoriaSeleccionada());
+                dataGridArticulosPorCategoria.DataSource = listaArticulos;
+                dataGridArticulosPorCategoria.Columns["Id"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            labelListadoArt.Text = "Listado de Artículos con Categoría " + getCategoriaSeleccionada().Nombre;
+
         }
 
         private Categoria getCategoriaSeleccionada()
@@ -89,17 +108,15 @@ namespace TP1
             form.ShowDialog();
         }
 
-        private void listaCategorias_SelectionChanged(object sender, EventArgs e)
-        {
-            labelCodigoCategoria.Text = getCategoriaSeleccionada().Codigo.ToString();
-            labelNombreCategoria.Text = getCategoriaSeleccionada().Nombre;
-        }
-
         private void btnRestablecer_Click(object sender, EventArgs e)
         {
             textBoxFiltro.Text = "";
             textBoxFiltro.Focus();
 
+        }
+        private void listaCategorias_SelectionChanged(object sender, EventArgs e)
+        {
+            cargarListaArticulos();
         }
     }
 }

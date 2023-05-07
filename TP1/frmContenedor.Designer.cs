@@ -66,8 +66,8 @@
             this.listarMarcasToolStripMenuItem,
             this.listarCategoríasToolStripMenuItem});
             this.ListadosToolStripMenuItem.Name = "ListadosToolStripMenuItem";
-            this.ListadosToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.ListadosToolStripMenuItem.Text = "Listar";
+            this.ListadosToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.ListadosToolStripMenuItem.Text = "Ver";
             // 
             // listarArticulosToolStripMenuItem
             // 
@@ -112,14 +112,14 @@
             // BuscarArtporCódigoToolStripMenuItem1
             // 
             this.BuscarArtporCódigoToolStripMenuItem1.Name = "BuscarArtporCódigoToolStripMenuItem1";
-            this.BuscarArtporCódigoToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.BuscarArtporCódigoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.BuscarArtporCódigoToolStripMenuItem1.Text = "Por código";
             this.BuscarArtporCódigoToolStripMenuItem1.Click += new System.EventHandler(this.porCódigoToolStripMenuItem1_Click);
             // 
             // BuscarArtporCódigoToolStripMenuItem2
             // 
             this.BuscarArtporCódigoToolStripMenuItem2.Name = "BuscarArtporCódigoToolStripMenuItem2";
-            this.BuscarArtporCódigoToolStripMenuItem2.Size = new System.Drawing.Size(137, 22);
+            this.BuscarArtporCódigoToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.BuscarArtporCódigoToolStripMenuItem2.Text = "Por nombre";
             this.BuscarArtporCódigoToolStripMenuItem2.Click += new System.EventHandler(this.porNombreToolStripMenuItem1_Click);
             // 
@@ -151,25 +151,25 @@
             // instructivoDeUsoToolStripMenuItem
             // 
             this.instructivoDeUsoToolStripMenuItem.Name = "instructivoDeUsoToolStripMenuItem";
-            this.instructivoDeUsoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.instructivoDeUsoToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.instructivoDeUsoToolStripMenuItem.Text = "Instructivo de uso";
             // 
             // reportarProblemaToolStripMenuItem
             // 
             this.reportarProblemaToolStripMenuItem.Name = "reportarProblemaToolStripMenuItem";
-            this.reportarProblemaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reportarProblemaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.reportarProblemaToolStripMenuItem.Text = "Reportar problema";
             // 
             // necesitoAyudaToolStripMenuItem
             // 
             this.necesitoAyudaToolStripMenuItem.Name = "necesitoAyudaToolStripMenuItem";
-            this.necesitoAyudaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.necesitoAyudaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.necesitoAyudaToolStripMenuItem.Text = "Necesito ayuda";
             // 
             // créditosToolStripMenuItem
             // 
             this.créditosToolStripMenuItem.Name = "créditosToolStripMenuItem";
-            this.créditosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.créditosToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.créditosToolStripMenuItem.Text = "Créditos";
             // 
             // menuPrincipal
@@ -222,11 +222,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(784, 411);
+            this.ClientSize = new System.Drawing.Size(784, 441);
             this.Controls.Add(this.menuPrincipal);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuPrincipal;
-            this.MinimumSize = new System.Drawing.Size(800, 450);
+            this.MinimumSize = new System.Drawing.Size(800, 480);
             this.Name = "ContenedorPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalogo Articulos";

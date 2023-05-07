@@ -56,5 +56,10 @@ namespace TP1
                 ((frmListadoCategorias)this.Owner).reload();
             }
         }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            agregarCategoria();
+        }
     }
 }

@@ -75,6 +75,7 @@
             this.btnAgregarCategoria.TabIndex = 20;
             this.btnAgregarCategoria.Text = "AGREGAR CATEGORÍA";
             this.btnAgregarCategoria.UseVisualStyleBackColor = false;
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
             // 
             // btnVolver
             // 

@@ -160,7 +160,7 @@ namespace TP1
 
         private void marcaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            frmDialogAgregarMarca form= new frmDialogAgregarMarca();
+            frmDialogAgregarMarca form = new frmDialogAgregarMarca();
             form.ShowDialog();
         }
 
