@@ -134,6 +134,11 @@ namespace TP1
                 MessageBox.Show("Por favor, completar los campos obligatorios", "Completar campos");
                 return false;
             }
+            else if (string.IsNullOrEmpty(textBoxPrecioArt.Text))
+            {
+                MessageBox.Show("Por favor indique un precio de venta", "Completar campos");
+                return false;
+            }
             return true;
         }
 
@@ -193,7 +198,15 @@ namespace TP1
 
         private void frmDialogAgregarArticulo_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ((Form2)this.Owner).reload();
+            if(this.Owner != null)
+            {
+                if (this.Owner.GetType() == typeof(Form2) )
+                {
+                    ((Form2)this.Owner).reload();
+                    return;
+                }
+
+            }
         }
     }
 }

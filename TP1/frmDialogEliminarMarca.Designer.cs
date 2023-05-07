@@ -66,6 +66,7 @@
             this.btnEliminarMarca.Text = "ELIMINAR MARCA";
             this.btnEliminarMarca.UseVisualStyleBackColor = false;
             this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
+            this.btnEliminarMarca.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnEliminarMarca_KeyDown);
             // 
             // btnVolver
             // 
@@ -94,6 +95,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Eliminar Marca";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.onFormClosed);
+            this.Load += new System.EventHandler(this.frmDialogEliminarMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

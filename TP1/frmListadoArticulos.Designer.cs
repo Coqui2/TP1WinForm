@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelListadoArticulos = new System.Windows.Forms.Label();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
@@ -181,14 +181,14 @@
             this.dataGridArticulos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridArticulos.GridColor = System.Drawing.SystemColors.Control;
@@ -230,7 +230,7 @@
             // labelCampo
             // 
             this.labelCampo.AutoSize = true;
-            this.labelCampo.Location = new System.Drawing.Point(51, 374);
+            this.labelCampo.Location = new System.Drawing.Point(54, 358);
             this.labelCampo.Name = "labelCampo";
             this.labelCampo.Size = new System.Drawing.Size(40, 13);
             this.labelCampo.TabIndex = 14;
@@ -240,7 +240,7 @@
             // 
             this.comboBoxCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCampo.FormattingEnabled = true;
-            this.comboBoxCampo.Location = new System.Drawing.Point(54, 390);
+            this.comboBoxCampo.Location = new System.Drawing.Point(57, 374);
             this.comboBoxCampo.Name = "comboBoxCampo";
             this.comboBoxCampo.Size = new System.Drawing.Size(104, 21);
             this.comboBoxCampo.TabIndex = 6;
@@ -250,7 +250,7 @@
             // 
             this.comboBoxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCriterio.FormattingEnabled = true;
-            this.comboBoxCriterio.Location = new System.Drawing.Point(180, 390);
+            this.comboBoxCriterio.Location = new System.Drawing.Point(183, 374);
             this.comboBoxCriterio.Name = "comboBoxCriterio";
             this.comboBoxCriterio.Size = new System.Drawing.Size(109, 21);
             this.comboBoxCriterio.TabIndex = 7;
@@ -258,7 +258,7 @@
             // labelCriterio
             // 
             this.labelCriterio.AutoSize = true;
-            this.labelCriterio.Location = new System.Drawing.Point(177, 374);
+            this.labelCriterio.Location = new System.Drawing.Point(180, 358);
             this.labelCriterio.Name = "labelCriterio";
             this.labelCriterio.Size = new System.Drawing.Size(39, 13);
             this.labelCriterio.TabIndex = 16;
@@ -267,7 +267,7 @@
             // labelFiltroAvanzado
             // 
             this.labelFiltroAvanzado.AutoSize = true;
-            this.labelFiltroAvanzado.Location = new System.Drawing.Point(301, 374);
+            this.labelFiltroAvanzado.Location = new System.Drawing.Point(304, 358);
             this.labelFiltroAvanzado.Name = "labelFiltroAvanzado";
             this.labelFiltroAvanzado.Size = new System.Drawing.Size(45, 13);
             this.labelFiltroAvanzado.TabIndex = 18;
@@ -275,7 +275,7 @@
             // 
             // textBoxFiltroAvanzado
             // 
-            this.textBoxFiltroAvanzado.Location = new System.Drawing.Point(304, 390);
+            this.textBoxFiltroAvanzado.Location = new System.Drawing.Point(307, 374);
             this.textBoxFiltroAvanzado.Name = "textBoxFiltroAvanzado";
             this.textBoxFiltroAvanzado.Size = new System.Drawing.Size(124, 20);
             this.textBoxFiltroAvanzado.TabIndex = 8;
@@ -283,7 +283,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(445, 387);
+            this.btnBuscar.Location = new System.Drawing.Point(448, 371);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(155, 23);
             this.btnBuscar.TabIndex = 9;
@@ -295,7 +295,7 @@
             // 
             this.labelFiltrado.AutoSize = true;
             this.labelFiltrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFiltrado.Location = new System.Drawing.Point(47, 338);
+            this.labelFiltrado.Location = new System.Drawing.Point(50, 322);
             this.labelFiltrado.Name = "labelFiltrado";
             this.labelFiltrado.Size = new System.Drawing.Size(145, 24);
             this.labelFiltrado.TabIndex = 21;

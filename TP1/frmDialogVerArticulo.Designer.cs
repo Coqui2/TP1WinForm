@@ -47,6 +47,7 @@
             this.btnImagenAnterior = new System.Windows.Forms.Button();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
+            this.labelPesos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,7 +158,7 @@
             // 
             this.labelPrecioArt.AutoSize = true;
             this.labelPrecioArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrecioArt.Location = new System.Drawing.Point(191, 211);
+            this.labelPrecioArt.Location = new System.Drawing.Point(215, 209);
             this.labelPrecioArt.Name = "labelPrecioArt";
             this.labelPrecioArt.Size = new System.Drawing.Size(111, 29);
             this.labelPrecioArt.TabIndex = 21;
@@ -255,11 +256,22 @@
             this.btnEliminarArticulo.UseVisualStyleBackColor = false;
             this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click_1);
             // 
+            // labelPesos
+            // 
+            this.labelPesos.AutoSize = true;
+            this.labelPesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPesos.Location = new System.Drawing.Point(191, 209);
+            this.labelPesos.Name = "labelPesos";
+            this.labelPesos.Size = new System.Drawing.Size(27, 29);
+            this.labelPesos.TabIndex = 33;
+            this.labelPesos.Text = "$";
+            // 
             // frmDialogVerArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 650);
+            this.Controls.Add(this.labelPesos);
             this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.btnModificarArticulo);
             this.Controls.Add(this.btnImagenAnterior);
@@ -312,5 +324,6 @@
         private System.Windows.Forms.Button btnImagenAnterior;
         private System.Windows.Forms.Button btnModificarArticulo;
         private System.Windows.Forms.Button btnEliminarArticulo;
+        private System.Windows.Forms.Label labelPesos;
     }
 }

@@ -33,8 +33,22 @@ namespace TP1
         {
             this.Close();
         }
+        private void btnEliminarMarca_Click(object sender, EventArgs e)
+        {
+            eliminarMarca();
+        }
 
-        private void onKeyDown(object sender, KeyEventArgs e)
+        private void onFormClosed(object sender, FormClosedEventArgs e)
+        {
+            ((frmListadoMarcas)this.Owner).reload();
+        }
+
+        private void frmDialogEliminarMarca_Load(object sender, EventArgs e)
+        {
+            btnEliminarMarca.Focus();
+        }
+
+        private void btnEliminarMarca_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -46,16 +60,6 @@ namespace TP1
                 this.Close();
                 return;
             }
-        }
-
-        private void btnEliminarMarca_Click(object sender, EventArgs e)
-        {
-            eliminarMarca();
-        }
-
-        private void onFormClosed(object sender, FormClosedEventArgs e)
-        {
-            ((frmListadoMarcas)this.Owner).reload();
         }
     }
 }

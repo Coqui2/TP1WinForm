@@ -66,6 +66,7 @@
             this.btnEliminarCategoria.Text = "ELIMINAR CATEGORÍA";
             this.btnEliminarCategoria.UseVisualStyleBackColor = false;
             this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
+            this.btnEliminarCategoria.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnEliminarCategoria_KeyDown);
             // 
             // btnVolver
             // 
@@ -94,7 +95,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Eliminar Categoría";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDialogEliminarCategoria_FormClosed);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmDialogEliminarCategoria_KeyDown);
+            this.Load += new System.EventHandler(this.frmDialogEliminarCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

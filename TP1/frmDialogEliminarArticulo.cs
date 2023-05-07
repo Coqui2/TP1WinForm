@@ -47,9 +47,19 @@ namespace TP1
 
         private void frmDialogEliminarArticulo_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (this.Owner != null)
+            if (this.Owner.GetType() == typeof(Form2))
             {
                 ((Form2)this.Owner).reload();
+                return;
+            }
+            else if (this.Owner.GetType() == typeof(frmListadoCategorias))
+            {
+                ((frmListadoCategorias)this.Owner).reload();
+                return;
+            }
+            else if (this.Owner.GetType() == typeof(frmDialogVerArticulo))
+            {
+                ((frmDialogVerArticulo)this.Owner).Close();
             }
         }
     }

@@ -35,7 +35,30 @@ namespace TP1
             this.Close();
         }
 
-        private void frmDialogEliminarCategoria_KeyDown(object sender, KeyEventArgs e)
+        private void frmDialogEliminarCategoria_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (this.Owner.GetType() == typeof(Form2))
+            {
+                ((Form2)this.Owner).reload();
+                return;
+            }
+            else if (this.Owner.GetType() == typeof(frmListadoCategorias)) { 
+                ((frmListadoCategorias)this.Owner).reload();
+                return;
+            }
+        }
+
+        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        {
+            eliminarCategoria();
+        }
+
+        private void frmDialogEliminarCategoria_Load(object sender, EventArgs e)
+        {
+            btnEliminarCategoria.Focus();
+        }
+
+        private void btnEliminarCategoria_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -47,16 +70,6 @@ namespace TP1
                 this.Close();
                 return;
             }
-        }
-
-        private void frmDialogEliminarCategoria_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            ((frmListadoCategorias)this.Owner).reload();
-        }
-
-        private void btnEliminarCategoria_Click(object sender, EventArgs e)
-        {
-            eliminarCategoria();
         }
     }
 }
