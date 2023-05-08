@@ -13,6 +13,30 @@ namespace Controlador
 {
     public class ArticuloNegocio
     {
+        public int GetUltimoIDArticulo()
+        {
+            int n=0;
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetConsulta("SELECT TOP(1) A.Id from Articulos A ORDER BY Id DESC\r\n");
+                datos.EjecutarLectura();
+                if(datos.Lector.Read())
+                {
+                    n = (int)datos.Lector["Id"];
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+            return n; 
+        }
+
         public List<Articulo> listar()
         {
             List<Articulo> lista = new List<Articulo>();

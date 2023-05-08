@@ -105,6 +105,10 @@ namespace TP1
                     {
                         imagenesActuales.Add(imagen.url);
                     }
+                    if(articulo.Id == 0)
+                    {
+                        articulo.Id = artNegocio.GetUltimoIDArticulo();
+                    }
                     foreach (string item in url)
                     {
                         if (!string.IsNullOrEmpty(item))
