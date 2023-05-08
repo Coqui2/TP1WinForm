@@ -42,7 +42,7 @@ namespace TP1
             {
                 MessageBox.Show(ex.Message);
             }
-            labelListadoArt.Text = "Listado de Artículos con Categoría " + getMarcaSeleccionada().Nombre;
+            labelListadoArt.Text = "Listado de Artículos con Marca " + getMarcaSeleccionada().Nombre;
         }
 
         private Marca getMarcaSeleccionada()
