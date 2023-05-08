@@ -123,5 +123,50 @@ namespace TP1
         {
             reload();
         }
+
+        private void dataGridArticulosPorCategoria_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmDialogVerArticulo form = new frmDialogVerArticulo((Articulo)dataGridArticulosPorCategoria.CurrentRow.DataBoundItem);
+            form.Owner = this;
+            form.ShowDialog();
+        }
+
+        void cargarPreview(Articulo seleccionado)
+        {
+            ImagenNegocio imagenNegocio = new ImagenNegocio();
+            List<Imagen> imagenes = imagenNegocio.listarPorIdArticulo(seleccionado.Id);
+            try
+            {
+                labelCodigoArticulo.Text = $"Código  {seleccionado.Codigo}";
+                labelNombreArticulo.Text = seleccionado.Nombre;
+                labelMarca.Text = seleccionado.Marca.Nombre;
+                labelPrecioArticulo.Text = $"${seleccionado.Precio}";
+                if (imagenes != null)
+                {
+                    pbxArticulo.Load(imagenes[0].url);
+                }
+                else
+                {
+                    pbxArticulo.Load("https://previews.123rf.com/images/freshwater/freshwater1711/freshwater171100021/89104479-p%C3%ADxel-404-p%C3%A1gina-de-error-p%C3%A1gina-no-encontrada.jpg");
+                }
+            }
+            catch (Exception)
+            {
+                pbxArticulo.Load("https://previews.123rf.com/images/freshwater/freshwater1711/freshwater171100021/89104479-p%C3%ADxel-404-p%C3%A1gina-de-error-p%C3%A1gina-no-encontrada.jpg");
+                //MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dataGridArticulosPorCategoria_SelectionChanged(object sender, EventArgs e)
+        {
+            cargarPreview((Articulo)dataGridArticulosPorCategoria.CurrentRow.DataBoundItem);
+        }
+
+        private void btnVerArticulo_Click(object sender, EventArgs e)
+        {
+            frmDialogVerArticulo form = new frmDialogVerArticulo((Articulo)dataGridArticulosPorCategoria.CurrentRow.DataBoundItem);
+            form.Owner = this;
+            form.ShowDialog();
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContenedorPrincipal));
             this.ventanaInicio = new System.Windows.Forms.ToolStripMenuItem();
             this.ListadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,15 @@
             this.artículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureLogo = new System.Windows.Forms.PictureBox();
+            this.btnArticulos = new System.Windows.Forms.Button();
+            this.btnMarcas = new System.Windows.Forms.Button();
+            this.btnCategorias = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.menuPrincipal.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // ventanaInicio
@@ -64,23 +73,20 @@
             // listarArticulosToolStripMenuItem
             // 
             this.listarArticulosToolStripMenuItem.Name = "listarArticulosToolStripMenuItem";
-            this.listarArticulosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listarArticulosToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.listarArticulosToolStripMenuItem.Text = "Artículos";
-            this.listarArticulosToolStripMenuItem.Click += new System.EventHandler(this.listarArticulosToolStripMenuItem_Click);
             // 
             // listarMarcasToolStripMenuItem
             // 
             this.listarMarcasToolStripMenuItem.Name = "listarMarcasToolStripMenuItem";
-            this.listarMarcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listarMarcasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.listarMarcasToolStripMenuItem.Text = "Marcas";
-            this.listarMarcasToolStripMenuItem.Click += new System.EventHandler(this.listarMarcasToolStripMenuItem_Click);
             // 
             // listarCategoríasToolStripMenuItem
             // 
             this.listarCategoríasToolStripMenuItem.Name = "listarCategoríasToolStripMenuItem";
-            this.listarCategoríasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listarCategoríasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.listarCategoríasToolStripMenuItem.Text = "Categorías";
-            this.listarCategoríasToolStripMenuItem.Click += new System.EventHandler(this.listarCategoríasToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -94,13 +100,13 @@
             // instructivoDeUsoToolStripMenuItem
             // 
             this.instructivoDeUsoToolStripMenuItem.Name = "instructivoDeUsoToolStripMenuItem";
-            this.instructivoDeUsoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.instructivoDeUsoToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.instructivoDeUsoToolStripMenuItem.Text = "Instructivo de uso";
             // 
             // créditosToolStripMenuItem
             // 
             this.créditosToolStripMenuItem.Name = "créditosToolStripMenuItem";
-            this.créditosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.créditosToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.créditosToolStripMenuItem.Text = "Créditos";
             // 
             // menuPrincipal
@@ -129,41 +135,134 @@
             // artículoToolStripMenuItem
             // 
             this.artículoToolStripMenuItem.Name = "artículoToolStripMenuItem";
-            this.artículoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.artículoToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.artículoToolStripMenuItem.Text = "Artículo";
             this.artículoToolStripMenuItem.Click += new System.EventHandler(this.artículoToolStripMenuItem_Click);
             // 
             // marcaToolStripMenuItem
             // 
             this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.marcaToolStripMenuItem.Text = "Marca";
             this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click_1);
             // 
             // categoríaToolStripMenuItem
             // 
             this.categoríaToolStripMenuItem.Name = "categoríaToolStripMenuItem";
-            this.categoríaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoríaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.categoríaToolStripMenuItem.Text = "Categoría";
             this.categoríaToolStripMenuItem.Click += new System.EventHandler(this.categoríaToolStripMenuItem_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(75)))), ((int)(((byte)(185)))));
+            this.flowLayoutPanel1.Controls.Add(this.pictureLogo);
+            this.flowLayoutPanel1.Controls.Add(this.btnArticulos);
+            this.flowLayoutPanel1.Controls.Add(this.btnMarcas);
+            this.flowLayoutPanel1.Controls.Add(this.btnCategorias);
+            this.flowLayoutPanel1.Controls.Add(this.btnSalir);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 24);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(162, 417);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // pictureLogo
+            // 
+            this.pictureLogo.ImageLocation = "https://images.fravega.com/f500/2a6cb41abc8f227048a32b7b3ec183d8.jpg";
+            this.pictureLogo.Location = new System.Drawing.Point(3, 3);
+            this.pictureLogo.Name = "pictureLogo";
+            this.pictureLogo.Padding = new System.Windows.Forms.Padding(15);
+            this.pictureLogo.Size = new System.Drawing.Size(159, 102);
+            this.pictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureLogo.TabIndex = 0;
+            this.pictureLogo.TabStop = false;
+            // 
+            // btnArticulos
+            // 
+            this.btnArticulos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnArticulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(0)))), ((int)(((byte)(152)))));
+            this.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArticulos.ForeColor = System.Drawing.Color.White;
+            this.btnArticulos.Location = new System.Drawing.Point(0, 123);
+            this.btnArticulos.Margin = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.btnArticulos.Name = "btnArticulos";
+            this.btnArticulos.Size = new System.Drawing.Size(162, 41);
+            this.btnArticulos.TabIndex = 1;
+            this.btnArticulos.Text = "ARTÍCULOS";
+            this.btnArticulos.UseVisualStyleBackColor = false;
+            this.btnArticulos.Click += new System.EventHandler(this.btnArticulos_Click);
+            // 
+            // btnMarcas
+            // 
+            this.btnMarcas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMarcas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(0)))), ((int)(((byte)(152)))));
+            this.btnMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarcas.ForeColor = System.Drawing.Color.White;
+            this.btnMarcas.Location = new System.Drawing.Point(0, 164);
+            this.btnMarcas.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMarcas.Name = "btnMarcas";
+            this.btnMarcas.Size = new System.Drawing.Size(162, 41);
+            this.btnMarcas.TabIndex = 2;
+            this.btnMarcas.Text = "MARCAS";
+            this.btnMarcas.UseVisualStyleBackColor = false;
+            this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
+            // 
+            // btnCategorias
+            // 
+            this.btnCategorias.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCategorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(0)))), ((int)(((byte)(152)))));
+            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategorias.ForeColor = System.Drawing.Color.White;
+            this.btnCategorias.Location = new System.Drawing.Point(0, 205);
+            this.btnCategorias.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(162, 41);
+            this.btnCategorias.TabIndex = 3;
+            this.btnCategorias.Text = "CATEGORÍAS";
+            this.btnCategorias.UseVisualStyleBackColor = false;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(0)))), ((int)(((byte)(152)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(0, 246);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(162, 41);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // ContenedorPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(784, 441);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuPrincipal;
             this.MinimumSize = new System.Drawing.Size(800, 480);
             this.Name = "ContenedorPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Catalogo Articulos";
+            this.Text = "FRAVEGA - Tienda";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuPrincipal.ResumeLayout(false);
             this.menuPrincipal.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,6 +283,12 @@
         private System.Windows.Forms.ToolStripMenuItem artículoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoríaToolStripMenuItem;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureLogo;
+        private System.Windows.Forms.Button btnArticulos;
+        private System.Windows.Forms.Button btnMarcas;
+        private System.Windows.Forms.Button btnCategorias;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 

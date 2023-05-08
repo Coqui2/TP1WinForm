@@ -37,7 +37,6 @@
             this.textBoxDescripcionArt = new System.Windows.Forms.TextBox();
             this.labelMarcaArt = new System.Windows.Forms.Label();
             this.labelCategoriaArt = new System.Windows.Forms.Label();
-            this.btnDuplicarArticulo = new System.Windows.Forms.Button();
             this.labelPrecioArt = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.textBoxMarcaArt = new System.Windows.Forms.TextBox();
@@ -54,10 +53,10 @@
             // labelTituloArt
             // 
             this.labelTituloArt.AutoSize = true;
-            this.labelTituloArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTituloArt.Location = new System.Drawing.Point(121, 34);
+            this.labelTituloArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTituloArt.Location = new System.Drawing.Point(30, 58);
             this.labelTituloArt.Name = "labelTituloArt";
-            this.labelTituloArt.Size = new System.Drawing.Size(233, 31);
+            this.labelTituloArt.Size = new System.Drawing.Size(184, 25);
             this.labelTituloArt.TabIndex = 3;
             this.labelTituloArt.Text = "(NOMBRE_ART)";
             // 
@@ -142,18 +141,6 @@
             this.labelCategoriaArt.TabIndex = 12;
             this.labelCategoriaArt.Text = "Categoría:";
             // 
-            // btnDuplicarArticulo
-            // 
-            this.btnDuplicarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuplicarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btnDuplicarArticulo.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btnDuplicarArticulo.Location = new System.Drawing.Point(35, 532);
-            this.btnDuplicarArticulo.Name = "btnDuplicarArticulo";
-            this.btnDuplicarArticulo.Size = new System.Drawing.Size(201, 32);
-            this.btnDuplicarArticulo.TabIndex = 10;
-            this.btnDuplicarArticulo.Text = "DUPLICAR";
-            this.btnDuplicarArticulo.UseVisualStyleBackColor = false;
-            // 
             // labelPrecioArt
             // 
             this.labelPrecioArt.AutoSize = true;
@@ -235,9 +222,9 @@
             this.btnModificarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btnModificarArticulo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnModificarArticulo.Location = new System.Drawing.Point(259, 532);
+            this.btnModificarArticulo.Location = new System.Drawing.Point(35, 532);
             this.btnModificarArticulo.Name = "btnModificarArticulo";
-            this.btnModificarArticulo.Size = new System.Drawing.Size(201, 32);
+            this.btnModificarArticulo.Size = new System.Drawing.Size(425, 32);
             this.btnModificarArticulo.TabIndex = 8;
             this.btnModificarArticulo.Text = "MODIFICAR";
             this.btnModificarArticulo.UseVisualStyleBackColor = false;
@@ -281,7 +268,6 @@
             this.Controls.Add(this.textBoxMarcaArt);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.labelPrecioArt);
-            this.Controls.Add(this.btnDuplicarArticulo);
             this.Controls.Add(this.labelCategoriaArt);
             this.Controls.Add(this.labelMarcaArt);
             this.Controls.Add(this.textBoxDescripcionArt);
@@ -314,7 +300,6 @@
         private System.Windows.Forms.TextBox textBoxDescripcionArt;
         private System.Windows.Forms.Label labelMarcaArt;
         private System.Windows.Forms.Label labelCategoriaArt;
-        private System.Windows.Forms.Button btnDuplicarArticulo;
         private System.Windows.Forms.Label labelPrecioArt;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.TextBox textBoxMarcaArt;

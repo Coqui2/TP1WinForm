@@ -110,7 +110,19 @@ namespace TP1
         {
             if(this.Owner != null)
             {
-                ((Form2)this.Owner).reload();
+                if(this.Owner.GetType() == typeof(Form2))
+                {
+                    ((Form2)this.Owner).reload();
+                }
+                else if(this.Owner.GetType() == typeof(frmListadoMarcas))
+                {
+                    ((frmListadoMarcas)this.Owner).reload();
+                }
+                else if (this.Owner.GetType() == typeof(frmListadoCategorias))
+                {
+                    ((frmListadoCategorias)this.Owner).reload();
+                }
+
             }
         }
 

@@ -43,50 +43,6 @@ namespace TP1
             form2.Show();
         }
 
-        private void listarArticulosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == typeof(Form2))
-                {
-                    form.Focus();
-                    return;
-                }
-            }
-            Form2 form2 = new Form2();
-            form2.MdiParent = this;
-            form2.Show();
-        }
-
-        private void listarMarcasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == typeof(frmListadoMarcas))
-                {
-                    form.Focus(); 
-                    return;
-                }
-            }
-            frmListadoMarcas form4 = new frmListadoMarcas();
-            form4.MdiParent = this;
-            form4.Show();
-        }
-
-        private void listarCategoríasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == typeof(frmListadoCategorias))
-                {
-                    form.Focus();
-                    return;
-                }
-            }
-            frmListadoCategorias form5 = new frmListadoCategorias();
-            form5.MdiParent = this;
-            form5.Show();
-        }
         
         private void artículoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -104,6 +60,60 @@ namespace TP1
         {
             frmDialogAgregarCategoria form = new frmDialogAgregarCategoria();
             form.ShowDialog();
+        }
+
+        private void btnArticulos_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Form2))
+                {
+                    form.Focus();
+                    return;
+                }
+            }
+            Form2 form2 = new Form2();
+            form2.MdiParent = this;
+            form2.Show();
+        }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(frmListadoMarcas))
+                {
+                    form.Focus();
+                    return;
+                }
+            }
+            frmListadoMarcas form4 = new frmListadoMarcas();
+            form4.MdiParent = this;
+            form4.Show();
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(frmListadoCategorias))
+                {
+                    form.Focus();
+                    return;
+                }
+            }
+            frmListadoCategorias form5 = new frmListadoCategorias();
+            form5.MdiParent = this;
+            form5.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Desea salir del programa?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == System.Windows.Forms.DialogResult.Yes)
+            {
+                Close();
+            }
         }
     }
 }

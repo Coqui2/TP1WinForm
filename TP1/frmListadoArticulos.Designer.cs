@@ -112,7 +112,7 @@
             this.pbxArticulo.Location = new System.Drawing.Point(626, 122);
             this.pbxArticulo.Name = "pbxArticulo";
             this.pbxArticulo.Size = new System.Drawing.Size(115, 112);
-            this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxArticulo.TabIndex = 6;
             this.pbxArticulo.TabStop = false;
             // 
@@ -160,10 +160,11 @@
             // 
             this.btnVerArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVerArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerArticulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnVerArticulo.Location = new System.Drawing.Point(627, 318);
             this.btnVerArticulo.Name = "btnVerArticulo";
-            this.btnVerArticulo.Size = new System.Drawing.Size(123, 23);
+            this.btnVerArticulo.Size = new System.Drawing.Size(161, 35);
             this.btnVerArticulo.TabIndex = 3;
             this.btnVerArticulo.Text = "Ver detalles";
             this.btnVerArticulo.UseVisualStyleBackColor = false;
@@ -215,9 +216,9 @@
             // 
             // textBoxFiltro
             // 
-            this.textBoxFiltro.Location = new System.Drawing.Point(205, 91);
+            this.textBoxFiltro.Location = new System.Drawing.Point(194, 90);
             this.textBoxFiltro.Name = "textBoxFiltro";
-            this.textBoxFiltro.Size = new System.Drawing.Size(251, 20);
+            this.textBoxFiltro.Size = new System.Drawing.Size(122, 20);
             this.textBoxFiltro.TabIndex = 0;
             this.textBoxFiltro.TextChanged += new System.EventHandler(this.onTxtChange);
             // 
@@ -305,7 +306,7 @@
             // 
             this.btnRestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRestablecer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnRestablecer.Location = new System.Drawing.Point(489, 87);
+            this.btnRestablecer.Location = new System.Drawing.Point(334, 88);
             this.btnRestablecer.Name = "btnRestablecer";
             this.btnRestablecer.Size = new System.Drawing.Size(84, 23);
             this.btnRestablecer.TabIndex = 1;

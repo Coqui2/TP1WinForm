@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelListadoCategorias = new System.Windows.Forms.Label();
             this.btnModificarCategoria = new System.Windows.Forms.Button();
             this.btnEliminarCategoria = new System.Windows.Forms.Button();
@@ -40,8 +40,15 @@
             this.btnRestablecer = new System.Windows.Forms.Button();
             this.labelListadoArt = new System.Windows.Forms.Label();
             this.dataGridArticulosPorCategoria = new System.Windows.Forms.DataGridView();
+            this.btnVerArticulo = new System.Windows.Forms.Button();
+            this.labelPrecioArticulo = new System.Windows.Forms.Label();
+            this.labelMarca = new System.Windows.Forms.Label();
+            this.labelCodigoArticulo = new System.Windows.Forms.Label();
+            this.labelNombreArticulo = new System.Windows.Forms.Label();
+            this.pbxArticulo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrisCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridArticulosPorCategoria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // labelListadoCategorias
@@ -59,7 +66,7 @@
             this.btnModificarCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarCategoria.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnModificarCategoria.Location = new System.Drawing.Point(519, 304);
+            this.btnModificarCategoria.Location = new System.Drawing.Point(536, 304);
             this.btnModificarCategoria.Name = "btnModificarCategoria";
             this.btnModificarCategoria.Size = new System.Drawing.Size(75, 23);
             this.btnModificarCategoria.TabIndex = 3;
@@ -72,7 +79,7 @@
             this.btnEliminarCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarCategoria.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(614, 304);
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(631, 304);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
             this.btnEliminarCategoria.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarCategoria.TabIndex = 4;
@@ -104,14 +111,14 @@
             this.dataGrisCategorias.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGrisCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrisCategorias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrisCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrisCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrisCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGrisCategorias.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGrisCategorias.GridColor = System.Drawing.SystemColors.Control;
@@ -120,7 +127,7 @@
             this.dataGrisCategorias.Name = "dataGrisCategorias";
             this.dataGrisCategorias.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGrisCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrisCategorias.Size = new System.Drawing.Size(638, 178);
+            this.dataGrisCategorias.Size = new System.Drawing.Size(731, 178);
             this.dataGrisCategorias.StandardTab = true;
             this.dataGrisCategorias.TabIndex = 9;
             this.dataGrisCategorias.SelectionChanged += new System.EventHandler(this.listaCategorias_SelectionChanged);
@@ -176,14 +183,14 @@
             this.dataGridArticulosPorCategoria.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridArticulosPorCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridArticulosPorCategoria.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridArticulosPorCategoria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridArticulosPorCategoria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridArticulosPorCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridArticulosPorCategoria.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridArticulosPorCategoria.GridColor = System.Drawing.SystemColors.Control;
@@ -192,9 +199,70 @@
             this.dataGridArticulosPorCategoria.Name = "dataGridArticulosPorCategoria";
             this.dataGridArticulosPorCategoria.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridArticulosPorCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridArticulosPorCategoria.Size = new System.Drawing.Size(638, 178);
+            this.dataGridArticulosPorCategoria.Size = new System.Drawing.Size(731, 146);
             this.dataGridArticulosPorCategoria.StandardTab = true;
             this.dataGridArticulosPorCategoria.TabIndex = 18;
+            this.dataGridArticulosPorCategoria.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridArticulosPorCategoria_CellContentDoubleClick);
+            this.dataGridArticulosPorCategoria.SelectionChanged += new System.EventHandler(this.dataGridArticulosPorCategoria_SelectionChanged);
+            // 
+            // btnVerArticulo
+            // 
+            this.btnVerArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerArticulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVerArticulo.Location = new System.Drawing.Point(189, 626);
+            this.btnVerArticulo.Name = "btnVerArticulo";
+            this.btnVerArticulo.Size = new System.Drawing.Size(161, 35);
+            this.btnVerArticulo.TabIndex = 19;
+            this.btnVerArticulo.Text = "Ver detalles";
+            this.btnVerArticulo.UseVisualStyleBackColor = false;
+            this.btnVerArticulo.Click += new System.EventHandler(this.btnVerArticulo_Click);
+            // 
+            // labelPrecioArticulo
+            // 
+            this.labelPrecioArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrecioArticulo.Location = new System.Drawing.Point(185, 603);
+            this.labelPrecioArticulo.Name = "labelPrecioArticulo";
+            this.labelPrecioArticulo.Size = new System.Drawing.Size(147, 20);
+            this.labelPrecioArticulo.TabIndex = 24;
+            this.labelPrecioArticulo.Text = "$ (PrecioArticulo)";
+            // 
+            // labelMarca
+            // 
+            this.labelMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMarca.Location = new System.Drawing.Point(185, 583);
+            this.labelMarca.Name = "labelMarca";
+            this.labelMarca.Size = new System.Drawing.Size(141, 20);
+            this.labelMarca.TabIndex = 23;
+            this.labelMarca.Text = "(MarcaArticulo)";
+            // 
+            // labelCodigoArticulo
+            // 
+            this.labelCodigoArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodigoArticulo.Location = new System.Drawing.Point(185, 538);
+            this.labelCodigoArticulo.Name = "labelCodigoArticulo";
+            this.labelCodigoArticulo.Size = new System.Drawing.Size(141, 24);
+            this.labelCodigoArticulo.TabIndex = 22;
+            this.labelCodigoArticulo.Text = "Cod. #1111";
+            // 
+            // labelNombreArticulo
+            // 
+            this.labelNombreArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreArticulo.Location = new System.Drawing.Point(185, 562);
+            this.labelNombreArticulo.Name = "labelNombreArticulo";
+            this.labelNombreArticulo.Size = new System.Drawing.Size(128, 20);
+            this.labelNombreArticulo.TabIndex = 21;
+            this.labelNombreArticulo.Text = "(NombreArticulo)";
+            // 
+            // pbxArticulo
+            // 
+            this.pbxArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbxArticulo.Location = new System.Drawing.Point(51, 539);
+            this.pbxArticulo.Name = "pbxArticulo";
+            this.pbxArticulo.Size = new System.Drawing.Size(115, 112);
+            this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxArticulo.TabIndex = 20;
+            this.pbxArticulo.TabStop = false;
             // 
             // frmListadoCategorias
             // 
@@ -202,8 +270,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 606);
+            this.ClientSize = new System.Drawing.Size(800, 697);
             this.ControlBox = false;
+            this.Controls.Add(this.btnVerArticulo);
+            this.Controls.Add(this.labelPrecioArticulo);
+            this.Controls.Add(this.labelMarca);
+            this.Controls.Add(this.labelCodigoArticulo);
+            this.Controls.Add(this.labelNombreArticulo);
+            this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.dataGridArticulosPorCategoria);
             this.Controls.Add(this.labelListadoArt);
             this.Controls.Add(this.btnRestablecer);
@@ -223,6 +297,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGrisCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridArticulosPorCategoria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +314,11 @@
         private System.Windows.Forms.Button btnRestablecer;
         private System.Windows.Forms.Label labelListadoArt;
         private System.Windows.Forms.DataGridView dataGridArticulosPorCategoria;
+        private System.Windows.Forms.Button btnVerArticulo;
+        private System.Windows.Forms.Label labelPrecioArticulo;
+        private System.Windows.Forms.Label labelMarca;
+        private System.Windows.Forms.Label labelCodigoArticulo;
+        private System.Windows.Forms.Label labelNombreArticulo;
+        private System.Windows.Forms.PictureBox pbxArticulo;
     }
 }

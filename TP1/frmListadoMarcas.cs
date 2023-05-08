@@ -35,14 +35,14 @@ namespace TP1
             try
             {
                 listaArticulos = negocio.listar(getMarcaSeleccionada());
-                dataGridArticulosPorCategoria.DataSource = listaArticulos;
-                dataGridArticulosPorCategoria.Columns["Id"].Visible = false;
+                dataGridArticulosPorMarca.DataSource = listaArticulos;
+                dataGridArticulosPorMarca.Columns["Id"].Visible = false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            labelListadoArt.Text = "Listado de Artículos con Categoría " + getMarcaSeleccionada().Nombre;
+            labelListadoArt.Text = "Listado de Artículos con Marca " + getMarcaSeleccionada().Nombre;
         }
 
         private Marca getMarcaSeleccionada()
@@ -120,6 +120,55 @@ namespace TP1
         {
             textBoxFiltro.Text = "";
             textBoxFiltro.Focus();
+        }
+
+        private void dataGridArticulosPorCategoria_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmDialogVerArticulo form = new frmDialogVerArticulo((Articulo)dataGridArticulosPorMarca.CurrentRow.DataBoundItem);
+            form.Owner = this;
+            form.ShowDialog();
+        }
+
+        private void dataGridArticulosPorCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnVerArticulo_Click(object sender, EventArgs e)
+        {
+            frmDialogVerArticulo form = new frmDialogVerArticulo((Articulo)dataGridArticulosPorMarca.CurrentRow.DataBoundItem);
+            form.Owner = this;
+            form.ShowDialog();
+        }
+
+        private void dataGridArticulosPorCategoria_SelectionChanged(object sender, EventArgs e)
+        {
+            cargarPreview((Articulo)dataGridArticulosPorMarca.CurrentRow.DataBoundItem);
+        }
+        void cargarPreview(Articulo seleccionado)
+        {
+            ImagenNegocio imagenNegocio = new ImagenNegocio();
+            List<Imagen> imagenes = imagenNegocio.listarPorIdArticulo(seleccionado.Id);
+            try
+            {
+                labelCodigoArticulo.Text = $"Código  {seleccionado.Codigo}";
+                labelNombreArticulo.Text = seleccionado.Nombre;
+                labelCategoria.Text = seleccionado.Categoria.Nombre;
+                labelPrecioArticulo.Text = $"${seleccionado.Precio}";
+                if (imagenes != null)
+                {
+                    pbxArticulo.Load(imagenes[0].url);
+                }
+                else
+                {
+                    pbxArticulo.Load("https://previews.123rf.com/images/freshwater/freshwater1711/freshwater171100021/89104479-p%C3%ADxel-404-p%C3%A1gina-de-error-p%C3%A1gina-no-encontrada.jpg");
+                }
+            }
+            catch (Exception)
+            {
+                pbxArticulo.Load("https://previews.123rf.com/images/freshwater/freshwater1711/freshwater171100021/89104479-p%C3%ADxel-404-p%C3%A1gina-de-error-p%C3%A1gina-no-encontrada.jpg");
+                //MessageBox.Show(ex.Message);
+            }
         }
     }
 }

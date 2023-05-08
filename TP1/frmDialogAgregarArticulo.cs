@@ -25,7 +25,7 @@ namespace TP1
             InitializeComponent();
             this.articulo = articulo;
             labelAgregarArt.Text = "Modificar articulo";
-            Text = "Modificar Articulo";
+            Text = "Modificar " + articulo.Nombre;
         }
         private void frmDialogAgregarArticulo_Load(object sender, EventArgs e)
         {
@@ -212,14 +212,18 @@ namespace TP1
 
         private void frmDialogAgregarArticulo_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(this.Owner != null)
+            if (this.Owner != null)
             {
-                if (this.Owner.GetType() == typeof(Form2) )
+                if (this.Owner.GetType() == typeof(Form2))
                 {
                     ((Form2)this.Owner).reload();
                     return;
                 }
-
+                if (this.Owner.GetType() == typeof(frmDialogVerArticulo))
+                {
+                    ((frmDialogVerArticulo)this.Owner).Close();
+                    return;
+                }
             }
         }
     }

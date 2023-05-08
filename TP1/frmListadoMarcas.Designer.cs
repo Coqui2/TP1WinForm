@@ -36,11 +36,18 @@
             this.listaMarcas = new System.Windows.Forms.DataGridView();
             this.labelFiltro = new System.Windows.Forms.Label();
             this.textBoxFiltro = new System.Windows.Forms.TextBox();
-            this.dataGridArticulosPorCategoria = new System.Windows.Forms.DataGridView();
+            this.dataGridArticulosPorMarca = new System.Windows.Forms.DataGridView();
             this.labelListadoArt = new System.Windows.Forms.Label();
             this.btnRestablecer = new System.Windows.Forms.Button();
+            this.btnVerArticulo = new System.Windows.Forms.Button();
+            this.labelPrecioArticulo = new System.Windows.Forms.Label();
+            this.labelCategoria = new System.Windows.Forms.Label();
+            this.labelCodigoArticulo = new System.Windows.Forms.Label();
+            this.labelNombreArticulo = new System.Windows.Forms.Label();
+            this.pbxArticulo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.listaMarcas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridArticulosPorCategoria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridArticulosPorMarca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // labelListadoMarcas
@@ -132,18 +139,18 @@
             this.textBoxFiltro.TabIndex = 0;
             this.textBoxFiltro.TextChanged += new System.EventHandler(this.onTextChange);
             // 
-            // dataGridArticulosPorCategoria
+            // dataGridArticulosPorMarca
             // 
-            this.dataGridArticulosPorCategoria.AllowUserToAddRows = false;
-            this.dataGridArticulosPorCategoria.AllowUserToDeleteRows = false;
-            this.dataGridArticulosPorCategoria.AllowUserToResizeColumns = false;
-            this.dataGridArticulosPorCategoria.AllowUserToResizeRows = false;
-            this.dataGridArticulosPorCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridArticulosPorMarca.AllowUserToAddRows = false;
+            this.dataGridArticulosPorMarca.AllowUserToDeleteRows = false;
+            this.dataGridArticulosPorMarca.AllowUserToResizeColumns = false;
+            this.dataGridArticulosPorMarca.AllowUserToResizeRows = false;
+            this.dataGridArticulosPorMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridArticulosPorCategoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridArticulosPorCategoria.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridArticulosPorCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridArticulosPorCategoria.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridArticulosPorMarca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridArticulosPorMarca.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridArticulosPorMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridArticulosPorMarca.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -151,18 +158,21 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridArticulosPorCategoria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridArticulosPorCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridArticulosPorCategoria.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridArticulosPorCategoria.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridArticulosPorCategoria.Location = new System.Drawing.Point(55, 389);
-            this.dataGridArticulosPorCategoria.MultiSelect = false;
-            this.dataGridArticulosPorCategoria.Name = "dataGridArticulosPorCategoria";
-            this.dataGridArticulosPorCategoria.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridArticulosPorCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridArticulosPorCategoria.Size = new System.Drawing.Size(638, 178);
-            this.dataGridArticulosPorCategoria.StandardTab = true;
-            this.dataGridArticulosPorCategoria.TabIndex = 6;
+            this.dataGridArticulosPorMarca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridArticulosPorMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridArticulosPorMarca.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridArticulosPorMarca.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridArticulosPorMarca.Location = new System.Drawing.Point(51, 387);
+            this.dataGridArticulosPorMarca.MultiSelect = false;
+            this.dataGridArticulosPorMarca.Name = "dataGridArticulosPorMarca";
+            this.dataGridArticulosPorMarca.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridArticulosPorMarca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridArticulosPorMarca.Size = new System.Drawing.Size(714, 146);
+            this.dataGridArticulosPorMarca.StandardTab = true;
+            this.dataGridArticulosPorMarca.TabIndex = 6;
+            this.dataGridArticulosPorMarca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridArticulosPorCategoria_CellContentClick);
+            this.dataGridArticulosPorMarca.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridArticulosPorCategoria_CellContentDoubleClick);
+            this.dataGridArticulosPorMarca.SelectionChanged += new System.EventHandler(this.dataGridArticulosPorCategoria_SelectionChanged);
             // 
             // labelListadoArt
             // 
@@ -186,16 +196,81 @@
             this.btnRestablecer.UseVisualStyleBackColor = true;
             this.btnRestablecer.Click += new System.EventHandler(this.btnRestablecer_Click);
             // 
+            // btnVerArticulo
+            // 
+            this.btnVerArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerArticulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVerArticulo.Location = new System.Drawing.Point(189, 626);
+            this.btnVerArticulo.Name = "btnVerArticulo";
+            this.btnVerArticulo.Size = new System.Drawing.Size(161, 35);
+            this.btnVerArticulo.TabIndex = 25;
+            this.btnVerArticulo.Text = "Ver detalles";
+            this.btnVerArticulo.UseVisualStyleBackColor = false;
+            this.btnVerArticulo.Click += new System.EventHandler(this.btnVerArticulo_Click);
+            // 
+            // labelPrecioArticulo
+            // 
+            this.labelPrecioArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrecioArticulo.Location = new System.Drawing.Point(185, 603);
+            this.labelPrecioArticulo.Name = "labelPrecioArticulo";
+            this.labelPrecioArticulo.Size = new System.Drawing.Size(147, 20);
+            this.labelPrecioArticulo.TabIndex = 30;
+            this.labelPrecioArticulo.Text = "$ (PrecioArticulo)";
+            // 
+            // labelCategoria
+            // 
+            this.labelCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCategoria.Location = new System.Drawing.Point(185, 583);
+            this.labelCategoria.Name = "labelCategoria";
+            this.labelCategoria.Size = new System.Drawing.Size(141, 20);
+            this.labelCategoria.TabIndex = 29;
+            this.labelCategoria.Text = "(CategoriaArticulo)";
+            // 
+            // labelCodigoArticulo
+            // 
+            this.labelCodigoArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodigoArticulo.Location = new System.Drawing.Point(185, 538);
+            this.labelCodigoArticulo.Name = "labelCodigoArticulo";
+            this.labelCodigoArticulo.Size = new System.Drawing.Size(141, 24);
+            this.labelCodigoArticulo.TabIndex = 28;
+            this.labelCodigoArticulo.Text = "Cod. #1111";
+            // 
+            // labelNombreArticulo
+            // 
+            this.labelNombreArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreArticulo.Location = new System.Drawing.Point(185, 562);
+            this.labelNombreArticulo.Name = "labelNombreArticulo";
+            this.labelNombreArticulo.Size = new System.Drawing.Size(128, 20);
+            this.labelNombreArticulo.TabIndex = 27;
+            this.labelNombreArticulo.Text = "(NombreArticulo)";
+            // 
+            // pbxArticulo
+            // 
+            this.pbxArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbxArticulo.Location = new System.Drawing.Point(51, 539);
+            this.pbxArticulo.Name = "pbxArticulo";
+            this.pbxArticulo.Size = new System.Drawing.Size(115, 112);
+            this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxArticulo.TabIndex = 26;
+            this.pbxArticulo.TabStop = false;
+            // 
             // frmListadoMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 610);
+            this.ClientSize = new System.Drawing.Size(800, 697);
             this.ControlBox = false;
+            this.Controls.Add(this.btnVerArticulo);
+            this.Controls.Add(this.labelPrecioArticulo);
+            this.Controls.Add(this.labelCategoria);
+            this.Controls.Add(this.labelCodigoArticulo);
+            this.Controls.Add(this.labelNombreArticulo);
+            this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.btnRestablecer);
-            this.Controls.Add(this.dataGridArticulosPorCategoria);
+            this.Controls.Add(this.dataGridArticulosPorMarca);
             this.Controls.Add(this.labelListadoArt);
             this.Controls.Add(this.textBoxFiltro);
             this.Controls.Add(this.labelFiltro);
@@ -212,7 +287,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.listaMarcas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridArticulosPorCategoria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridArticulosPorMarca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,8 +302,14 @@
         private System.Windows.Forms.DataGridView listaMarcas;
         private System.Windows.Forms.Label labelFiltro;
         private System.Windows.Forms.TextBox textBoxFiltro;
-        private System.Windows.Forms.DataGridView dataGridArticulosPorCategoria;
+        private System.Windows.Forms.DataGridView dataGridArticulosPorMarca;
         private System.Windows.Forms.Label labelListadoArt;
         private System.Windows.Forms.Button btnRestablecer;
+        private System.Windows.Forms.Button btnVerArticulo;
+        private System.Windows.Forms.Label labelPrecioArticulo;
+        private System.Windows.Forms.Label labelCategoria;
+        private System.Windows.Forms.Label labelCodigoArticulo;
+        private System.Windows.Forms.Label labelNombreArticulo;
+        private System.Windows.Forms.PictureBox pbxArticulo;
     }
 }
